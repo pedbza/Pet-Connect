@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pet Connect </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="../assets/img/pata.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    
+
+    <!-- Template Stylesheet -->
+    
+    <link rel="preload" href="../assets/css/main.css" as="style">
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid border-bottom d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-4 text-center py-2">
+                <div class="d-inline-flex align-items-center">
+                    <i class="bi bi-geo-alt fs-1 text-orange me-3"></i>
+                    <div class="text-start">
+                        <h6 class="text-uppercase mb-1">Nosso escritório</h6>
+                        <span>Universidade Católica de Brasília</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center border-start border-end py-2">
+                <div class="d-inline-flex align-items-center">
+                    <i class="bi bi-envelope-open fs-1 text-orange me-3"></i>
+                    <div class="text-start">
+                        <h6 class="text-uppercase mb-1">Email</h6>
+                        <span>Pet_Connect@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center py-2">
+                <div class="d-inline-flex align-items-center">
+                    <i class="bi bi-phone-vibrate fs-1 text-orange me-3"></i>
+                    <div class="text-start">
+                        <h6 class="text-uppercase mb-1">Ligue para nós</h6>
+                        <span>+55(61) 91122-3344</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+
+    <!-- Confirmation Message Start -->
+    <div id="cart-message" class="position-fixed bottom-0 end-0 p-4"
+        style="display: none; background-color: rgba(0, 0, 0, 0.7); color: white; border-radius: 5px;">
+        <p>Produto adicionado ao carrinho!</p>
+    </div>
+    <!-- Confirmation Message End -->
+
+
+
+    <!-- Products Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="border-start border-5 border-orange ps-5 mb-5" style="max-width: 600px;">
+                <h6 class="text-orange text-uppercase">Produtos</h6>
+                <h1 class="display-5 text-uppercase mb-0">Itens no Carrinho</h1>
+                <div class="container py-5">
+                    <ul id="cart-items" class="list-group mb-4"></ul>
+                    <button class="btn btn-orange" onclick="clearCart()">Esvaziar Carrinho</button>
+                </div>
+
+            </div>
+           
+        </div>
+    </div>
+    <!-- Products End -->
+
+
+
+
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-light mt-5 py-5">
+        <div class="container pt-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-orange ps-3 mb-4">Entre em contato</h5>
+                    <p class="mb-4">Tem alguma dúvida, sugestão ou precisa de ajuda? Nossa equipe do PetConnect está
+                        pronta para te atender. Entre em contato conosco pelos canais abaixo — será um prazer falar com
+                        você!</p>
+                    <p class="mb-2"><i class="bi bi-geo-alt text-orange me-2"></i>Univesidade Católica de Brasília</p>
+                    <p class="mb-2"><i class="bi bi-envelope-open text-orange me-2"></i>PetConnect@gmail.com</p>
+                    <p class="mb-0"><i class="bi bi-telephone text-orange me-2"></i>+55 (61)91122-3344</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-orange ps-3 mb-4">Links rápidos</h5>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-body mb-2" href="../index.html"><i class="bi bi-arrow-right text-orange me-2"></i>Início</a>
+                        <a class="text-body mb-2" href="../pages/about.html"><i class="bi bi-arrow-right text-orange me-2"></i>Sobre
+                            nós</a>
+                        <a class="text-body mb-2" href="../pages/product.html"><i class="bi bi-arrow-right text-orange me-2"></i>Nossos
+                            serviços</a>
+                        <a class="text-body mb-2" href="../pages/team.html"><i class="bi bi-arrow-right text-orange me-2"></i>Conheça a
+                            equipe</a>
+                        <a class="text-body mb-2" href="../pages/testimonial.html"><i class="bi bi-arrow-right text-orange me-2"></i>Blog mais
+                            recente</a>
+                        <a class="text-body" href="../pages/contact.html"><i class="bi bi-arrow-right text-orange me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-orange ps-3 mb-4">Links populares</h5>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-body mb-2" href="../index.html"><i class="bi bi-arrow-right text-orange me-2"></i>Início</a>
+                        <a class="text-body mb-2" href="../pages/about.html"><i class="bi bi-arrow-right text-orange me-2"></i>Sobre
+                            nós</a>
+                        <a class="text-body mb-2" href="../pages/product.html"><i class="bi bi-arrow-right text-orange me-2"></i>Nossos
+                            serviços</a>
+                        <a class="text-body mb-2" href="../pages/team.html"><i class="bi bi-arrow-right text-orange me-2"></i>Conheça a
+                            equipe</a>
+                        <a class="text-body mb-2" href="../pages/testimonial.html"><i class="bi bi-arrow-right text-orange me-2"></i>Blog mais
+                            recente</a>
+                        <a class="text-body" href="../pages/contact.html"><i class="bi bi-arrow-right text-orange me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-orange ps-3 mb-4">Boletim informativo</h5>
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control p-3" placeholder="Seu Email">
+                            <button class="btn btn-orange">Inscrever-se</button>
+                        </div>
+                    </form>
+                    <h6 class="text-uppercase mt-4 mb-3">Siga nós</h6>
+                    <div class="d-flex">
+                        <a class="btn btn-outline-orange btn-square me-2" href="#"><i class="bi bi-twitter"></i></a>
+                        <a class="btn btn-outline-orange btn-square me-2" href="#"><i class="bi bi-facebook"></i></a>
+                        <a class="btn btn-outline-orange btn-square me-2" href="#"><i class="bi bi-linkedin"></i></a>
+                        <a class="btn btn-outline-orange btn-square" href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-12 text-center text-body">
+                    <a class="text-body" href="../pages/price.html">Termos e Condições</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="../pages/blog.html">política de Privacidade</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="../pages/detail.html">Suporte ao Cliente</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="../pages/about.html">Pagamentos</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="../pages/contact.html">Ajuda</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="../pages/service.html">Perguntas frequentes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white-50 py-4">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-md-0">&copy; <a class="text-white" href="#">Pet Connect</a>.Todos os direitos
+                        reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Projetado por <a class="text-white" href="">alunos da Univesidade Católica de
+                            Brasília </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top start -->
+    <a href="#" class="btn btn-orange py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- Back to Top  end -->
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/easing/easing.min.js"></script>
+    <script src="../assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="../assets/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <script>
+        // Função para carregar os itens do carrinho
+        function loadCart() {
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartList = document.getElementById('cart-items');
+            const totalPriceEl = document.getElementById('total-price');
+            cartList.innerHTML = ''; // Limpa a lista do carrinho
+            let total = 0;
+    
+            // Verifica se o carrinho está vazio
+            if (cartItems.length === 0) {
+                cartList.innerHTML = '<li class="list-group-item">O carrinho está vazio.</li>';
+                totalPriceEl.textContent = 'R$ 0,00';
+                return;
+            }
+    
+            // Exibe os itens do carrinho
+            cartItems.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.className = 'list-group-item d-flex justify-content-between align-items-center';
+    
+                total += item.price;
+    
+                li.innerHTML = `
+                    <div>
+                        <strong>${item.name}</strong><br>
+                        <small>R$ ${item.price.toFixed(2).replace('.', ',')}</small>
+                    </div>
+                    <button class="btn btn-sm btn-outline-danger" onclick="removeItem(${index})">&times;</button>
+                `;
+                cartList.appendChild(li);
+            });
+    
+            // Atualiza o preço total
+            totalPriceEl.textContent = 'R$ ' + total.toFixed(2).replace('.', ',');
+        }
+    
+        // Função para limpar o carrinho
+        function clearCart() {
+            localStorage.removeItem('cart');
+            loadCart(); // Atualiza a visualização
+        }
+    
+        // Função para remover um item do carrinho
+        function removeItem(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1); // Remove o item pelo índice
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCart(); // Atualiza a visualização
+        }
+    
+        // Função para finalizar a compra
+        function finalizePurchase() {
+            alert("Compra finalizada com sucesso! Obrigado :)");
+            clearCart(); // Limpa o carrinho após a compra
+        }
+    
+        // Carrega os itens do carrinho quando a página for carregada
+        loadCart();
+    </script>
+    
+
+
+    <!-- Template Javascript -->
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

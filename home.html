@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pet Connect </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Pet Connect - Seu pet, nosso cuidado.">
+    <meta name="keywords" content="Pet Connect, Pet Shop, Cuidados com Pets, Saúde Animal">
+    
+    <!-- Performance optimization -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#ff5e3a">
+
+    <!-- Favicon -->
+    <link href="assets/img/pata.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Unified Stylesheet -->
+    <link rel="preload" href="assets/css/main.css" as="style">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+<div class="container-fluid border-bottom d-none d-lg-block position-relative">
+    <div class="row gx-0">
+        <div class="col-lg-4 text-center py-2">
+            <div class="d-inline-flex align-items-center">
+                <i class="bi bi-geo-alt fs-1 text-orange me-3"></i>
+                <div class="text-start">
+                    <h6 class="text-uppercase mb-1">Nosso escritório</h6>
+                    <span>Univesidade Catolica de Brasilia</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 text-center border-start border-end py-2">
+            <div class="d-inline-flex align-items-center">
+                <i class="bi bi-envelope-open fs-1 text-orange me-3"></i>
+                <div class="text-start">
+                    <h6 class="text-uppercase mb-1">Email</h6>
+                    <span>Pet_Connect@gmail.com</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 text-center py-2">
+            <div class="d-inline-flex align-items-center justify-content-center">
+                <i class="bi bi-phone-vibrate fs-1 text-orange me-3"></i>
+                <div class="text-start">
+                    <h6 class="text-uppercase mb-1">Ligue para nós</h6>
+                    <span>+55(61) 91122-3344</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão de perfil no canto superior direito -->
+    <a href="./pages/perfis/perfil/perfil.html" class="position-absolute top-0 end-0 m-3 text-orange" style="font-size: 1.8rem;" title="Meu Perfil">
+        <i class="bi bi-person-circle"></i>
+    </a>
+</div>
+<!-- Topbar End -->
+
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0">
+        <a href="/login/login_tutor.html" class="navbar-brand ms-lg-5">
+            <img src="assets/img/Pet Shop (2) (1).png" alt="Logo do Pet Shop" height="150">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="index.html" class="nav-item nav-link active">Início</a>
+                <a href="pages/price.html" class="nav-item nav-link">Planos</a>
+                <a href="pages/service.html" class="nav-item nav-link">Serviços</a>
+                <a href="pages/product.html" class="nav-item nav-link">Produto</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Páginas</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="pages/team.html" class="dropdown-item">A equipe</a>
+                        <a href="pages/testimonial.html" class="dropdown-item">Depoimento</a>
+                    </div>
+                </div>
+                <a href="pages/contact.html" class="nav-item nav-link nav-contact bg-orange text-white px-5 ms-lg-5">Contato
+                    <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-orange py-5 mb-5 hero-header">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h1 class="display-1 text-uppercase text-light mb-lg-4">Pet connect</h1>
+                    <h1 class="text-uppercase text-white mb-lg-4">Conecte-se ao bem-estar do seu pet</h1>
+                    <p class="fs-4 text-white mb-lg-4">Mantenha-se informado sobre a saúde, bem-estar e rotina do seu
+                        pet com atualizações em tempo real. Acompanhe consultas, vacinas, alimentação e interaja
+                        diretamente com especialistas e cuidadores.</p>
+                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
+                        <a href="" class="btn btn-outline-light border-2 py-md-3 px-md-5 me-5">Leia mais</a>
+                        <button type="button" class="btn-play" data-bs-toggle="modal"
+                            data-src="https://www.youtube.com/embed/yuOOO_l66r4" data-bs-target="#videoModal">
+                            <span></span>
+                        </button>
+                        <h5 class="font-weight-normal text-white m-0 ms-4 d-none d-sm-block">Reproduzir vídeo</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+
+    <!-- Video Modal Start -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- 16:9 aspect ratio -->
+                    <div class="ratio ratio-16x9">
+                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen
+                            allowscriptaccess="always" allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Modal End -->
+
+
+    <!-- Sobre o PetConnect -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded" src="assets/img/about.jpg"
+                            style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="border-start border-5 border-orange ps-5 mb-5">
+                        <h6 class="text-orange text-uppercase">Sobre nós</h6>
+                        <h1 class="display-5 text-uppercase mb-0">Conectamos tutores a cuidados de qualidade para seus
+                            pets</h1>
+                    </div>
+                    <h4 class="text-body mb-4">
+                        O PetConnect nasceu da paixão por animais e da necessidade de facilitar a vida de tutores e
+                        profissionais do ramo pet.
+                        Nossa plataforma reúne tudo o que você precisa para garantir o bem-estar do seu melhor amigo, de
+                        forma simples e acessível.
+                    </h4>
+                    <p class="mb-4">
+                        Com o PetConnect, você pode encontrar veterinários especializados, agendar consultas e serviços,
+                        acompanhar a saúde do seu pet e até mesmo comprar produtos essenciais em um só lugar.
+                        Nosso objetivo é criar uma rede eficiente e confiável, conectando tutores a clínicas, pet shops
+                        e profissionais comprometidos com o bem-estar animal.
+                    </p>
+
+                    <div class="bg-light p-4">
+                        <ul class="nav nav-pills justify-content-between mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item w-50" role="presentation">
+                                <button class="nav-link btn-orange text-uppercase w-100 active" id="pills-1-tab"
+                                    data-bs-toggle="pill" data-bs-target="#pills-1" type="button" role="tab"
+                                    aria-controls="pills-1" aria-selected="true">
+                                    Nossa Missão
+                                </button>
+                            </li>
+                            <li class="nav-item w-50" role="presentation">
+                                <button class="nav-link btn-orange text-uppercase w-100" id="pills-2-tab"
+                                    data-bs-toggle="pill" data-bs-target="#pills-2" type="button" role="tab"
+                                    aria-controls="pills-2" aria-selected="false">
+                                    Nossa Visão
+                                </button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-1" role="tabpanel"
+                                aria-labelledby="pills-1-tab">
+                                <p class="mb-0">
+                                    Nossa missão é transformar a experiência de cuidar de um pet, tornando cada etapa
+                                    mais fácil e acessível.
+                                    Queremos conectar tutores a profissionais e estabelecimentos de confiança,
+                                    garantindo um atendimento eficiente e de qualidade para os animais de estimação.
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
+                                <p class="mb-0">
+                                    Nossa visão é ser a principal plataforma de conexão entre tutores e o mundo pet,
+                                    oferecendo inovação, segurança e conveniência.
+                                    Acreditamos que cada pet merece o melhor cuidado, e queremos ser a ponte para esse
+                                    futuro onde a tecnologia e o amor pelos animais andam juntos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sobre o PetConnect End -->
+
+
+
+   <!-- Services Start -->
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="border-start border-5 border-orange ps-5 mb-5" style="max-width: 600px;">
+            <h6 class="text-orange text-uppercase">Serviços</h6>
+            <h1 class="display-5 text-uppercase mb-0">Tudo o que seu pet precisa em um só lugar</h1>
+        </div>
+        <div class="row g-5">
+            <!-- Serviço 1 -->
+            <div class="col-md-6">
+                <div class="service-item bg-light d-flex p-4">
+                    <i class="flaticon-house display-1 text-orange me-4"></i>
+                    <div>
+                        <h5 class="text-uppercase mb-3">Encontre Clínicas e Pet Shops</h5>
+                        <p>Localize os melhores estabelecimentos perto de você para consultas veterinárias, banho,
+                            tosa e muito mais.</p>
+                        <a class="text-orange text-uppercase" href="#" data-bs-toggle="modal" data-bs-target="#modal1">Saiba mais<i class="bi bi-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serviço 2 -->
+            <div class="col-md-6">
+                <div class="service-item bg-light d-flex p-4">
+                    <i class="flaticon-food display-1 text-orange me-4"></i>
+                    <div>
+                        <h5 class="text-uppercase mb-3">Loja Online</h5>
+                        <p>Compre alimentos, brinquedos e medicamentos para seu pet diretamente pelo PetConnect.</p>
+                        <a class="text-orange text-uppercase" href="#" data-bs-toggle="modal" data-bs-target="#modal2">Saiba mais<i class="bi bi-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serviço 3 -->
+            <div class="col-md-6">
+                <div class="service-item bg-light d-flex p-4">
+                    <i class="flaticon-grooming display-1 text-orange me-4"></i>
+                    <div>
+                        <h5 class="text-uppercase mb-3">Histórico de Saúde</h5>
+                        <p>Acompanhe o histórico de consultas, vacinas e tratamentos do seu pet de forma organizada
+                            e acessível.</p>
+                        <a class="text-orange text-uppercase" href="#" data-bs-toggle="modal" data-bs-target="#modal3">Saiba mais<i class="bi bi-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serviço 4 -->
+            <div class="col-md-6">
+                <div class="service-item bg-light d-flex p-4">
+                    <i class="flaticon-cat display-1 text-orange me-4"></i>
+                    <div>
+                        <h5 class="text-uppercase mb-3">Agendamentos Online</h5>
+                        <p>Marque consultas veterinárias, banho e tosa com poucos cliques, diretamente pelo
+                            aplicativo.</p>
+                        <a class="text-orange text-uppercase" href="#" data-bs-toggle="modal" data-bs-target="#modal4">Saiba mais<i class="bi bi-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serviço 5 -->
+            <div class="col-md-6">
+                <div class="service-item bg-light d-flex p-4">
+                    <i class="flaticon-dog display-1 text-orange me-4"></i>
+                    <div>
+                        <h5 class="text-uppercase mb-3">Bate-papo com Especialistas</h5>
+                        <p>Tire dúvidas diretamente com veterinários e especialistas para garantir o bem-estar do
+                            seu pet.</p>
+                        <a class="text-orange text-uppercase" href="#" data-bs-toggle="modal" data-bs-target="#modal5">Saiba mais<i class="bi bi-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serviço 6 -->
+            <div class="col-md-6">
+                <div class="service-item bg-light d-flex p-4">
+                    <i class="flaticon-vaccine display-1 text-orange me-4"></i>
+                    <div>
+                        <h5 class="text-uppercase mb-3">Promoções e Benefícios</h5>
+                        <p>Aproveite descontos exclusivos em produtos e serviços para seu pet, disponíveis no
+                            PetConnect.</p>
+                        <a class="text-orange text-uppercase" href="#" data-bs-toggle="modal" data-bs-target="#modal6">Saiba mais<i class="bi bi-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Services End -->
+
+<!-- Modals -->
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabel1">🏥 Encontre Clínicas e Pet Shops</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          Com o PetConnect, localizar clínicas veterinárias e pet shops perto de você ficou muito mais fácil. Através de uma busca rápida e inteligente, você pode encontrar estabelecimentos por localização, tipo de serviço, especialidade e avaliações de outros tutores.
+  
+          Os perfis exibem dados importantes como endereço, horário de funcionamento, serviços disponíveis, fotos do local e profissionais atuantes. Você também pode iniciar um bate-papo direto para tirar dúvidas ou agendar um serviço de forma rápida e segura.
+  
+          Essa funcionalidade é ideal para quem busca praticidade e confiança ao cuidar do bem-estar do seu pet.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabel2">🛒 Loja Online</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          A Loja Online do PetConnect oferece tudo o que seu pet precisa em um só lugar. Rações, brinquedos, medicamentos, produtos de higiene e acessórios – tudo com entrega rápida e segura, direto na sua casa.
+  
+          Com uma navegação fácil e categorias organizadas, você pode comparar preços, ler avaliações de outros tutores e aproveitar promoções exclusivas. Ideal para quem busca praticidade e comodidade no dia a dia, sem abrir mão da qualidade.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modalLabel3" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabel3">📋 Histórico de Saúde</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          Tenha controle total da saúde do seu pet com o histórico digital do PetConnect. Acompanhe consultas, exames, vacinas e prescrições em um só lugar, de forma organizada e acessível.
+  
+          Essa funcionalidade permite visualizar datas, observações dos profissionais e recomendações de tratamento, facilitando o acompanhamento ao longo do tempo e auxiliando em futuras visitas veterinárias.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modalLabel4" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabel4">📅 Agendamentos Online</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          Com o PetConnect, agendar consultas, vacinações, banho e tosa ficou muito mais simples. Escolha o serviço desejado, selecione o profissional, defina o horário e pronto — tudo direto pelo aplicativo.
+  
+          Receba confirmações e lembretes automáticos, visualize a disponibilidade em tempo real e tenha total controle da rotina de cuidados do seu pet na palma da mão.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modalLabel5" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabel5">💬 Bate-papo com Especialistas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          Tenha acesso direto a veterinários e especialistas sem sair de casa. Pelo PetConnect, você pode tirar dúvidas, pedir orientações sobre saúde, comportamento e alimentação do seu pet em tempo real.
+  
+          Um canal prático e seguro para garantir apoio profissional sempre que precisar, seja para emergências ou cuidados do dia a dia.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="modalLabel6" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabel6">🎁 Promoções e Benefícios</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          Economize enquanto cuida do seu pet! No PetConnect, você encontra promoções exclusivas, cupons de desconto, campanhas sazonais e vantagens especiais em diversos serviços e produtos.
+  
+          Fique por dentro das novidades e aproveite ofertas personalizadas direto no app.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+    <!-- Encontre estabelecimentos perto de você -->
+    <div class="container-fluid py-5 bg-light">
+        <div class="container">
+            <div class="border-start border-5 border-orange ps-5 mb-5" style="max-width: 600px;">
+                <h6 class="text-orange text-uppercase">Descubra serviços próximos</h6>
+                <h1 class="display-5 text-uppercase mb-0">Encontre estabelecimentos perto de você</h1>
+            </div>
+
+            <!-- Formulário de Busca -->
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <input type="text" id="locationInput" class="form-control form-control-lg"
+                        placeholder="Digite sua localização ou permita acesso ao GPS">
+                </div>
+                <div class="col-lg-4">
+                    <button class="btn btn-orange w-100 py-3" onclick="buscarEstabelecimentos()">
+                        Buscar agora
+                    </button>
+                </div>
+            </div>
+
+            <!-- Espaço reservado para o mapa -->
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <div id="mapa-placeholder" class="rounded shadow-sm overflow-hidden">
+                        <img src="assets/img/map-placeholder.PNG" alt="Mapa Simulado" class="img-fluid w-100 rounded">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resultado da busca -->
+            <div id="resultados" class="row g-4 mt-5"></div>
+        </div>
+    </div>
+
+
+    <!-- Products Start -->
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="border-start border-5 border-orange ps-5 mb-5" style="max-width: 600px;">
+            <h6 class="text-orange text-uppercase">Produtos</h6>
+            <h1 class="display-5 text-uppercase mb-0">Produtos para seus melhores amigos</h1>
+        </div>
+        <div class="owl-carousel product-carousel">
+
+            <div class="pb-5">
+                <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                    <img class="img-fluid mb-4" src="assets/img/dogtoy.png" alt="">
+                    <h6 class="text-uppercase">Brinquedo de morder</h6>
+                    <h5 class="text-orange mb-3">R$12,99</h5>
+                </div>
+            </div>
+
+            <div class="pb-5">
+                <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                    <img class="img-fluid mb-4" src="assets/img/product-2.png" alt="">
+                    <h6 class="text-uppercase">Ração para felinos</h6>
+                    <h5 class="text-orange mb-3">R$99,90</h5>
+                </div>
+            </div>
+
+            <div class="pb-5">
+                <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                    <img class="img-fluid mb-4" src="assets/img/product-4.png" alt="">
+                    <h6 class="text-uppercase">Ração para cachorros de grande porte</h6>
+                    <h5 class="text-orange mb-3">R$139,99</h5>
+                </div>
+            </div>
+
+            <div class="pb-5">
+                <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                    <img class="img-fluid mb-4" src="assets/img/product-3.png" alt="">
+                    <h6 class="text-uppercase">Ração para cães pequenos - sabor Frango</h6>
+                    <h5 class="text-orange mb-3">R$119,90</h5>
+                </div>
+            </div>
+
+            <div class="pb-5">
+                <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                    <img class="img-fluid mb-4" src="assets/img/guia.jfif" alt="">
+                    <h6 class="text-uppercase">Guia retrátil para passeio - 10 metros</h6>
+                    <h5 class="text-orange mb-3">R$29,50</h5>
+                </div>
+            </div>
+
+            <div class="pb-5">
+                <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                    <img class="img-fluid mb-4" src="assets/img/product-3.png" alt="">
+                    <h6 class="text-uppercase">Ração para cães pequenos - sabor Carne</h6>
+                    <h5 class="text-orange mb-3">R$119,90</h5>
+                </div>
+            </div>
+
+            <div class="pb-5">
+                <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                    <img class="img-fluid mb-4" src="assets/img/kit.png" alt="">
+                    <h6 class="text-uppercase">Kit banho</h6>
+                    <h5 class="text-orange mb-3">R$89,90</h5>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="text-center mt-4">
+            <p class="mb-4">Gostou de algum dos nossos produtos? <strong>Veja mais ou clique abaixo e compre agora!</strong></p>
+            <a href="pages/product.html" class="btn btn-orange mt-2">Veja mais produtos</a>
+        </div>
+
+    </div>
+</div>
+<!-- Products End -->
+
+
+
+    <!-- Oferta Especial PetConnect -->
+    <div class="container-fluid bg-offer my-5 py-5">
+        <div class="container py-5">
+            <div class="row gx-5 justify-content-start">
+                <div class="col-lg-7">
+                    <div class="border-start border-5 border-dark ps-5 mb-5">
+                        <h6 class="text-dark text-uppercase">Oferta especial</h6>
+                        <h1 class="display-5 text-uppercase text-white mb-0">Ganhe 50% de desconto na sua primeira
+                            consulta</h1>
+                    </div>
+                    <p class="text-white mb-4">
+                        Cadastre-se agora no PetConnect e aproveite 50% de desconto na sua primeira consulta
+                        veterinária. Cuide do seu pet com praticidade e segurança, agendando atendimentos diretamente
+                        pelo nosso aplicativo.
+                    </p>
+                    <a href="" class="btn btn-light py-md-3 px-md-5 me-3">Aproveitar oferta</a>
+                    <a href="" class="btn btn-outline-light py-md-3 px-md-5">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Oferta Especial PetConnect End -->
+
+    <!-- Top Rated Establishments Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="border-start border-5 border-orange ps-5 mb-5" style="max-width: 600px;">
+                <h6 class="text-orange text-uppercase">Estabelecimentos Bem Avaliados</h6>
+                <h1 class="display-5 text-uppercase mb-0">Os melhores petshops e clínicas perto de você</h1>
+            </div>
+            <div class="owl-carousel team-carousel position-relative" style="padding-right: 25px;">
+                <div class="team-item">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="assets/img/catolicavet.jpg" alt="">
+                        <div class="team-overlay">
+                            <div class="d-flex align-items-center justify-content-start">
+                                <a class="btn btn-light btn-square mx-1" href="/pages/perfil_clinica.html"><i
+                                        class="bi bi-twitter"></i></a>
+                                <a class="btn btn-light btn-square mx-1" href="/pages/perfil_clinica.html"><i
+                                        class="bi bi-facebook"></i></a>
+                                <a class="btn btn-light btn-square mx-1" href="/pages/perfil_clinica.html"><i
+                                        class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-light text-center p-4">
+                        <h5 class="text-uppercase">Catolica vet - Clínica Veterinária</h5>
+                        <p class="m-0">⭐⭐⭐⭐⭐ (5.0)</p>
+                        <br>
+                        <p class="m-0"> "Oferecendo atendimento veterinário completo com profissionais experientes."</p>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="assets/img/hvsam.jpg" alt="">
+                        <div class="team-overlay">
+                        </div>
+                    </div>
+                    <div class="bg-light text-center p-4">
+                        <h5 class="text-uppercase">Amor Pet Shop</h5>
+                        <p class="m-0">⭐⭐⭐⭐ (4.7)</p>
+                        <br>
+                        <p class="m-0"> "Loja completa para seu pet, com produtos, banho e tosa de alta qualidade."</p>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="assets/img/icesp.jpg" alt="">
+                        <div class="team-overlay">
+                            <div class="d-flex align-items-center justify-content-start">
+                                <a class="btn btn-light btn-square mx-1" href="#"><i class="bi bi-twitter"></i></a>
+                                <a class="btn btn-light btn-square mx-1" href="#"><i class="bi bi-facebook"></i></a>
+                                <a class="btn btn-light btn-square mx-1" href="#"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-light text-center p-4">
+                        <h5 class="text-uppercase">Clínica Vida Animal</h5>
+                        <p class="m-0">⭐⭐⭐⭐ (4.5)</p>
+                        <br>
+                        <p class="m-0"> "Especialistas em cuidados veterinários para cães e gatos."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top Rated Establishments End -->
+
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid bg-testimonial py-5" style="margin: 45px 0;">
+        <div class="container py-5">
+            <div class="row justify-content-end">
+                <div class="col-lg-7">
+                    <div class="owl-carousel testimonial-carousel bg-white p-5">
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-4">
+                                <img class="img-fluid mx-auto" src="assets/img/testimonial-1.jpg" alt="">
+                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white"
+                                    style="width: 45px; height: 45px;">
+                                    <i class="bi bi-chat-square-quote text-orange"></i>
+                                </div>
+                            </div>
+                            <p>"Sempre tive dificuldade em encontrar profissionais qualificados para cuidar do meu pet.
+                                Com o PetConnect, encontrei uma clínica incrível perto de casa e agora consigo marcar
+                                banho e tosa com poucos cliques. Meu pet nunca esteve tão bem cuidado!"</p>
+                            <hr class="w-25 mx-auto">
+                            <h5 class="text-uppercase">Maria Souza</h5>
+                            <span>Tutora da Mel</span>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-4">
+                                <img class="img-fluid mx-auto" src="assets/img/testimonial-2.jpg" alt="">
+                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white"
+                                    style="width: 45px; height: 45px;">
+                                    <i class="bi bi-chat-square-quote text-orange"></i>
+                                </div>
+                            </div>
+                            <p>"Com o PetConnect, consegui encontrar o médico perfeito para o meu pet! A plataforma me
+                                ajudou a agendar consultas de forma rápida e prática, além de oferecer um histórico
+                                detalhado da saúde do meu bichinho. Nunca foi tão fácil cuidar do meu melhor amigo!"</p>
+                            <hr class="w-25 mx-auto">
+                            <h5 class="text-uppercase">João Silva</h5>
+                            <span>Tutor do Thor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Blog Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="border-start border-5 border-orange ps-5 mb-5" style="max-width: 600px;">
+                <h6 class="text-orange text-uppercase">Notícias Recentes</h6>
+                <h1 class="display-5 text-uppercase mb-0">Últimas novidades do mundo pet</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="blog-item">
+                        <div class="row g-0 bg-light overflow-hidden">
+                            <div class="col-12 col-sm-5 h-100">
+                                <img class="img-fluid h-100" src="assets/img/blog-1.jpg" alt="" style="object-fit: cover;">
+                            </div>
+                            <div class="col-12 col-sm-7 h-100 d-flex flex-column justify-content-center">
+                                <div class="p-4">
+                                    <div class="d-flex mb-3">
+                                        <small class="me-3"><i class="bi bi-bookmarks me-2"></i>Tecnologia Pet</small>
+                                        <small><i class="bi bi-calendar-date me-2"></i>09 Jan, 2025</small>
+                                    </div>
+                                    <h5 class="text-uppercase mb-3">Novo dispositivo traduz latidos de cães</h5>
+                                    <p>Empresa de tecnologia pet lança rastreador GPS avançado que interpreta os latidos
+                                        dos cães, ajudando tutores a entenderem melhor seus pets.</p>
+                                    <a class="text-orange text-uppercase"
+                                        href="https://nypost.com/2025/01/09/tech/why-is-your-dog-barking-new-gadget-at-ces-2025-can-finally-tell-you/"
+                                        target="_blank">Leia mais<i class="bi bi-chevron-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="blog-item">
+                        <div class="row g-0 bg-light overflow-hidden">
+                            <div class="col-12 col-sm-5 h-100">
+                                <img class="img-fluid h-100" src="assets/img/blog-2.jpg" alt="" style="object-fit: cover;">
+                            </div>
+                            <div class="col-12 col-sm-7 h-100 d-flex flex-column justify-content-center">
+                                <div class="p-4">
+                                    <div class="d-flex mb-3">
+                                        <small class="me-3"><i class="bi bi-bookmarks me-2"></i>Viagens com Pets</small>
+                                        <small><i class="bi bi-calendar-date me-2"></i>15 Dez, 2024</small>
+                                    </div>
+                                    <h5 class="text-uppercase mb-3">Primeiro cruzeiro para cães é anunciado</h5>
+                                    <p>Companhias de cruzeiro lançam viagem exclusiva para cães e seus donos, oferecendo
+                                        serviços como spa, piscina e atividades recreativas.</p>
+                                    <a class="text-orange text-uppercase"
+                                        href="https://www.huffingtonpost.es/life/animales/luz-verde-primer-crucero-perros-mundo-peluqueria-masajes-piscina.html"
+                                        target="_blank">Leia mais<i class="bi bi-chevron-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-light mt-5 py-5">
+        <div class="container pt-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-orange ps-3 mb-4">Entre em contato</h5>
+                    <p class="mb-4">Tem alguma dúvida, sugestão ou precisa de ajuda? Nossa equipe do PetConnect está
+                        pronta para te atender. Entre em contato conosco pelos canais abaixo — será um prazer falar com
+                        você!</p>
+                    <p class="mb-2"><i class="bi bi-geo-alt text-orange me-2"></i>Univesidade Católica de Brasília</p>
+                    <p class="mb-2"><i class="bi bi-envelope-open text-orange me-2"></i>PetConnect@gmail.com</p>
+                    <p class="mb-0"><i class="bi bi-telephone text-orange me-2"></i>+55 (61)91122-3344</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-orange ps-3 mb-4">Links rápidos</h5>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-orange me-2"></i>Início</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-orange me-2"></i>Sobre
+                            nós</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-orange me-2"></i>Nossos
+                            serviços</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-orange me-2"></i>Conheça a
+                            equipe</a>
+                        <a class="text-body" href="#"><i class="bi bi-arrow-right text-orange me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-orange ps-3 mb-4">Links populares</h5>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-orange me-2"></i>Início</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-orange me-2"></i>Sobre
+                            nós</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-orange me-2"></i>Nossos
+                            serviços</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-orange me-2"></i>Conheça a
+                            equipe</a>
+                        <a class="text-body" href="#"><i class="bi bi-arrow-right text-orange me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-orange ps-3 mb-4">Boletim informativo</h5>
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control p-3" placeholder="Seu Email">
+                            <button class="btn btn-orange">Inscrever-se</button>
+                        </div>
+                    </form>
+                    <h6 class="text-uppercase mt-4 mb-3">Siga nós</h6>
+                    <div class="d-flex">
+                        <a class="btn btn-outline-orange btn-square me-2" href="#"><i class="bi bi-twitter"></i></a>
+                        <a class="btn btn-outline-orange btn-square me-2" href="#"><i class="bi bi-facebook"></i></a>
+                        <a class="btn btn-outline-orange btn-square me-2" href="#"><i class="bi bi-linkedin"></i></a>
+                        <a class="btn btn-outline-orange btn-square" href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-12 text-center text-body">
+                    <a class="text-body" href="">Termos e Condições</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">política de Privacidade</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">Suporte ao Cliente</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">Pagamentos</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">Ajuda</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">Perguntas frequentes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white-50 py-4">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-md-0">&copy; <a class="text-white" href="#">Pet Connect</a>.Todos os direitos
+                        reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Projetado por <a class="text-white" href="">alunos da Univesidade Católica de
+                            Brasília </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top start -->
+    <a href="#" class="btn btn-orange py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- Back to Top  end -->
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/lib/easing/easing.min.js"></script>
+    <script src="assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Script para buscar estabelecimentos -->
+    <script>
+        function buscarEstabelecimentos() {
+            let locationInput = document.getElementById('locationInput').value;
+
+            if (!locationInput) {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(pos => {
+                        let latitude = pos.coords.latitude;
+                        let longitude = pos.coords.longitude;
+                        carregarEstabelecimentos(latitude, longitude);
+                    }, () => {
+                        alert("Não foi possível obter sua localização. Digite seu endereço manualmente.");
+                    });
+                } else {
+                    alert("Geolocalização não suportada pelo seu navegador.");
+                }
+            } else {
+                // Simular busca por endereço digitado
+                carregarEstabelecimentos(null, null, locationInput);
+            }
+        }
+
+        function carregarEstabelecimentos(lat, lng, address = "") {
+            let estabelecimentos = [
+                {
+                    nome: "Católica Vet",
+                    tipo: "Clínica Veterinária",
+                    distancia: "0.4km",
+                    imagem: "assets/img/catolicavet.jpg"
+                },
+                {
+                    nome: "Clínica Veterinária ICESP",
+                    tipo: "Clínica Veterinária",
+                    distancia: "2.5km",
+                    imagem: "assets/img/icesp.jpg"
+                },
+                {
+                    nome: "Hospital Veterinário HVSAM",
+                    tipo: "Clínica Veterinária",
+                    distancia: "5.2km",
+                    imagem: "assets/img/hvsam.jpg"
+                }
+            ];
+
+            let resultadosDiv = document.getElementById("resultados");
+            resultadosDiv.innerHTML = ""; // Limpa os resultados anteriores
+
+            estabelecimentos.forEach(estabelecimento => {
+                let card = `
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm">
+                    <img src="${estabelecimento.imagem}" class="card-img-top" alt="${estabelecimento.nome}">
+                    <div class="card-body">
+                        <h5 class="card-title text-orange">${estabelecimento.nome}</h5>
+                        <p class="card-text">${estabelecimento.tipo}</p>
+                        <p class="card-text"><small class="text-muted">Distância: ${estabelecimento.distancia}</small></p>
+                    </div>
+                </div>
+            </div>
+        `;
+                resultadosDiv.innerHTML += card;
+            });
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Fundo com imagens */
+.background-container {
+  display: flex;
+  height: 100vh;
+  position: relative;
+}
+
+.bg-left, .bg-right {
+  flex: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bg-left {
+  background-image: url('/assets/img/capa3.jpg');
+  background-position: 30% center;
+  transition: background-position 0.5s ease;
+}
+
+.bg-left:hover {
+  background-position: 20% center;
+}
+
+.bg-right {
+  background-image: url('/assets/img/capa5.jpg');
+  background-position: 70% center;
+  transition: background-position 0.5s ease;
+}
+
+.bg-right:hover {
+  background-position: 80% center;
+}
+
+/* Card central */
+.content-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  max-width: 600px;
+  transform: translate(-50%, -60%);
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 1rem;
+  animation: slideDownFade 1s ease-out forwards;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  overflow: visible;
+}
+
+
+
+/* Animação da entrada */
+@keyframes slideDownFade {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Estilo dos botões */
+.btn-tutor,
+.btn-clinic {
+  padding: 14px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: 0.3s;
+  min-width: 180px;
+  box-sizing: border-box; 
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 15px transparent; /* reserva o espaço da sombra */
+}
+
+.btn-tutor {
+  background-color: #4CAF50; /* verde */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  min-width: 180px;
+  transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 20;
+}
+
+.btn-tutor:hover {
+  background-color: #45a045;
+  box-shadow: 0 8px 15px rgba(76, 175, 80, 0.4); /* mesma posição e tamanho da sombra */
+}
+
+.btn-clinic {
+  background-color: #2196F3; /* azul */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  min-width: 180px;
+  transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 20;
+  margin-bottom: 8px; /* reserva espaço para a sombra */
+
+}
+
+.btn-clinic:hover {
+  background-color: #1976d2;
+  box-shadow: 0 8px 15px rgba(33, 150, 243, 0.4);
+} 
+/* Responsividade */
+@media (max-width: 768px) {
+  .background-container {
+    flex-direction: column;
+  }
+
+  .content-card .card-body {
+    padding: 2rem;
+  }
+
+  .btn-tutor,
+  .btn-clinic {
+    width: 100%;
+  }
+}
+/* Ícones flutuantes nos botões */
+.icon-hover {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+  color: inherit;
+
+}
+
+/* Animação no hover */
+.btn-tutor:hover .icon-hover,
+.btn-clinic:hover .icon-hover {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-10px);
+}
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.wrap-login100-form-btn {
+  position: relative;
+  width: 220px;      /* largura controlada */
+  height: 60px;      /* altura padrão */
+  border-radius: 30px;
+  overflow: visible; /* permite que o ícone ultrapasse */
+  box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.login100-form-bgbtn {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #ff6600, #FCAD61, #ff6600, #FCAD61);
+  border-radius: 30px;
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.wrap-login100-form-btn:hover .login100-form-bgbtn {
+  opacity: 1;
+} 
+.login100-form-btn {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 10px;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 30px; /* mesmo raio do container externo */
+}
+
+/* Ícones animados */
+.wrap-login100-form-btn .icon {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  z-index: 1000; /* Mantém o ícone acima do botão */
+  pointer-events: none; /* Impede que o ícone atrapalhe o clique no botão */
+}
+
+.wrap-login100-form-btn:hover .icon {
+  top: -20px;
+  opacity: 1;
+}
+.icon-tutor {
+  color: #17751a !important; /* Verde */
+}
+
+.icon-clinic {
+  color: #2196F3 !important; /* Azul */
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<title>Registro do Estabelecimento - Pet Connect</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="../img/pata.ico" />
+	
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<style>
+		.logo-container {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			z-index: 1000;
+		}
+
+		.logo {
+			width: 300px;
+			height: auto;
+		}
+	</style>
+    <link rel="preload" href="../assets/css/main.css" as="style"
+    <link rel="stylesheet" href="../assets/css/main.css"
+    <link rel="preload" href="../assets/css/main.css" as="style">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="preload" href="../assets/css/main.css" as="style"
+    <link rel="stylesheet" href="../assets/css/main.css"
+</head>
+
+<body>
+	<div class="logo-container">
+		<img src="images/logo.png" alt="Logo" class="logo">
+	</div>
+
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('images/capa2.jpg');">
+			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title p-b-49">
+						Registrar Estabelecimento
+					</span>
+
+					<!-- Nome -->
+					<div class="wrap-input100 validate-input" data-validate="Nome é obrigatório">
+						<span class="label-input100">Nome do Estabelecimento</span>
+						<input class="input100" type="text" name="nome" placeholder="Digite o nome">
+					</div>
+
+					<!-- Email -->
+					<div class="wrap-input100 validate-input" data-validate="Email é obrigatório">
+						<span class="label-input100">Email</span>
+						<input class="input100" type="email" name="email" placeholder="Digite o email">
+					</div>
+
+					<!-- Telefone -->
+					<div class="wrap-input100 validate-input" data-validate="Telefone é obrigatório">
+						<span class="label-input100">Telefone</span>
+						<input class="input100" type="tel" name="telefone" placeholder="(xx) xxxxx-xxxx">
+					</div>
+
+					<!-- Endereço -->
+					<div class="wrap-input100 validate-input" data-validate="Endereço é obrigatório">
+						<span class="label-input100">Endereço</span>
+						<input class="input100" type="text" name="endereco" placeholder="Rua, número, bairro, cidade - UF">
+					</div>
+
+					<!-- CEP -->
+					<div class="wrap-input100 validate-input" data-validate="CEP é obrigatório">
+						<span class="label-input100">CEP</span>
+						<input class="input100" type="text" name="cep" placeholder="xxxxx-xxx">
+					</div>
+
+					<!-- CNPJ -->
+					<div class="wrap-input100 validate-input" data-validate="CNPJ é obrigatório">
+						<span class="label-input100">CNPJ</span>
+						<input class="input100" type="text" name="cnpj" placeholder="xx.xxx.xxx/0001-xx">
+					</div>
+					<br>
+
+					<!-- Serviços oferecidos -->
+					<div class="wrap-input100">
+						<span class="label-input100">Serviços Oferecidos</span>
+						<div class="checkbox">
+							<label><input type="checkbox" name="servicos" value="consulta"> Consulta</label><br>
+							<label><input type="checkbox" name="servicos" value="vacina"> Vacina</label><br>
+							<label><input type="checkbox" name="servicos" value="hotel"> Hotel</label><br>
+							<label><input type="checkbox" name="servicos" value="adestramento"> Adestramento</label><br>
+							<label><input type="checkbox" name="servicos" value="loja"> Loja de artigos</label><br>
+							<label><input type="checkbox" name="servicos" value="banhoetosa"> Banho e Tosa</label><br>
+							<label><input type="checkbox" name="servicos" value="emergencia"> Atendimento emergencial</label>
+						</div>
+					</div>
+					<br>
+
+					<!-- Tipo de Estabelecimento -->
+					<div class="wrap-input100">
+						<span class="label-input100">Tipo de Estabelecimento</span>
+						<select class="input100" name="tipo">
+							<option disabled selected>Selecione o tipo</option>
+							<option value="clinica">Clínica</option>
+							<option value="petshop">Petshop</option>
+							<option value="loja">Loja de Artigos Pet</option>
+							<option value="farmacia">Farmácia Pet</option>
+							<option value="ambos">Múltiplos (Clínica + Petshop, etc)</option>
+						</select>
+					</div>
+
+					<!-- Estrutura física -->
+					<div class="wrap-input100">
+						<span class="label-input100">Infraestrutura</span>
+						<textarea class="input100" name="estrutura" placeholder="Descreva salas de cirurgia, consultórios, capacidade de internação, etc."></textarea>
+					</div>
+
+					<!-- Senha -->
+					<div class="wrap-input100 validate-input" data-validate="Senha obrigatória">
+						<span class="label-input100">Senha</span>
+						<input class="input100" type="password" name="senha" placeholder="Digite a senha">
+					</div>
+
+					<!-- Confirmar senha -->
+					<div class="wrap-input100 validate-input" data-validate="Confirmação de senha obrigatória">
+						<span class="label-input100">Confirmar Senha</span>
+						<input class="input100" type="password" name="confirmar_senha" placeholder="Confirme a senha">
+					</div>
+					<br>
+
+					<!-- Botão -->
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button type="submit" class="login100-form-btn">Registrar</button>
+						</div>
+					</div>
+
+					<br><br><br>
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<a href="../index.html" class="login100-form-btn">
+								Botão dev
+							</a>
+						</div>
+					</div> 	
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="vendor/select2/select2.min.js"></script>
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

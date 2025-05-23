@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pet Connect </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="../assets/img/pata.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    
+
+    <!-- Template Stylesheet -->
+    
+    <link rel="preload" href="../assets/css/main.css" as="style">
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid border-bottom d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-4 text-center py-2">
+                <div class="d-inline-flex align-items-center">
+                    <i class="bi bi-geo-alt fs-1 text-orange me-3"></i>
+                    <div class="text-start">
+                        <h6 class="text-uppercase mb-1">Nosso escritório</h6>
+                        <span>Universidade Católica de Brasília</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center border-start border-end py-2">
+                <div class="d-inline-flex align-items-center">
+                    <i class="bi bi-envelope-open fs-1 text-orange me-3"></i>
+                    <div class="text-start">
+                        <h6 class="text-uppercase mb-1">Email</h6>
+                        <span>Pet_Connect@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center py-2">
+                <div class="d-inline-flex align-items-center">
+                    <i class="bi bi-phone-vibrate fs-1 text-orange me-3"></i>
+                    <div class="text-start">
+                        <h6 class="text-uppercase mb-1">Ligue para nós</h6>
+                        <span>+55(61) 91122-3344</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Cart Icon Start -->
+    <div class="position-fixed top-0 end-0 p-3">
+        <a href="../pages/cart.html" class="btn btn-orange rounded-circle"
+            style="width: 60px; height: 60px; display: flex; justify-content: center; align-items: center;">
+            <i class="bi bi-cart fs-2 text-white"></i>
+            <span id="cart-count" class="badge rounded-pill bg-dark position-absolute top-0 end-0 translate-middle-x"
+                style="font-size: 12px; padding: 5px 10px;">0</span>
+        </a>
+    </div>
+    <!-- Cart Icon End -->
+
+
+    <!-- Confirmation Message Start -->
+    <div id="cart-message" class="position-fixed bottom-0 end-0 p-4"
+        style="display: none; background-color: rgba(0, 0, 0, 0.7); color: white; border-radius: 5px;">
+        <p>Produto adicionado ao carrinho!</p>
+    </div>
+    <!-- Confirmation Message End -->
+
+
+
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0">
+        <a href="Login_v4/login.html" class="navbar-brand ms-lg-5">
+            <img src="../assets/img/Pet Shop (2) (1).png" alt="Logo do Pet Shop" height="150">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="../index.html" class="nav-item nav-link">Início</a>
+                <a href="price.html" class="nav-item nav-link ">Planos</a>
+                <a href="../pages/service.html" class="nav-item nav-link">Serviços</a>
+                <a href="../pages/product.html" class="nav-item nav-link active">Produto</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Páginas</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="../pages/team.html" class="dropdown-item">A equipe</a>
+                    </div>
+                </div>
+                <a href="../pages/contact.html" class="nav-item nav-link nav-contact bg-orange text-white px-5 ms-lg-5">Contato <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Products Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="border-start border-5 border-orange ps-5 mb-5" style="max-width: 600px;">
+                <h6 class="text-orange text-uppercase">Produtos</h6>
+                <h1 class="display-5 text-uppercase mb-0">Produtos para seus melhores amigos</h1>
+            </div>
+            <div class="owl-carousel product-carousel">
+                <div class="pb-5">
+                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                        <img class="img-fluid mb-4" src="../assets/img/product-1.png" alt="">
+                        <h6 class="text-uppercase">Ração natural para pássaros</h6>
+                        <h5 class="text-orange mb-0">R$59,99</h5>
+                        <div class="btn-action d-flex justify-content-center">
+                            <a class="btn btn-orange py-2 px-3 add-to-cart" data-product="Ração natural para pássaros"
+                                data-price="59.99" href="#"><i class="bi bi-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pb-5">
+                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                        <img class="img-fluid mb-4" src="../assets/img/product-2.png" alt="">
+                        <h6 class="text-uppercase">Ração para felinos</h6>
+                        <h5 class="text-orange mb-0">R$99,90</h5>
+                        <div class="btn-action d-flex justify-content-center">
+                            <a class="btn btn-orange py-2 px-3 add-to-cart" data-product="Ração para felinos"
+                                data-price="99.90" href="#"><i class="bi bi-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pb-5">
+                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                        <img class="img-fluid mb-4" src="../assets/img/product-3.png" alt="">
+                        <h6 class="text-uppercase">Ração para cachorros pequeno porte - sabor Carne</h6>
+                        <h5 class="text-orange mb-0">R$119,90</h5>
+                        <div class="btn-action d-flex justify-content-center">
+                            <a class="btn btn-orange py-2 px-3 add-to-cart"
+                                data-product="Ração para cachorros pequeno porte - sabor Carne" data-price="119.90"
+                                href="#"><i class="bi bi-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pb-5">
+                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                        <img class="img-fluid mb-4" src="../assets/img/product-4.png" alt="">
+                        <h6 class="text-uppercase">Ração para cachorros de Grande porte</h6>
+                        <h5 class="text-orange mb-0">R$139,99</h5>
+                        <div class="btn-action d-flex justify-content-center">
+                            <a class="btn btn-orange py-2 px-3 add-to-cart"
+                                data-product="Ração para cachorros de Grande porte" data-price="139.99" href="#"><i
+                                    class="bi bi-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pb-5">
+                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                        <img class="img-fluid mb-4" src="../assets/img/guia.jfif" alt="">
+                        <h6 class="text-uppercase">Guia para passeio retrátil - 10 metros</h6>
+                        <h5 class="text-orange mb-0">R$29,50</h5>
+                        <div class="btn-action d-flex justify-content-center">
+                            <a class="btn btn-orange py-2 px-3 add-to-cart"
+                                data-product="Guia para passeio retrátil - 10 metros" data-price="29.50" href="#"><i
+                                    class="bi bi-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pb-5">
+                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                        <img class="img-fluid mb-4" src="../assets/img/dogtoy.png" alt="">
+                        <h6 class="text-uppercase">Brinquedo de morder</h6>
+                        <h5 class="text-orange mb-0">R$12,99</h5>
+                        <div class="btn-action d-flex justify-content-center">
+                            <a class="btn btn-orange py-2 px-3 add-to-cart" data-product="Brinquedo de morder"
+                                data-price="12.99" href="#"><i class="bi bi-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pb-5">
+                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                        <img class="img-fluid mb-4" src="../assets/img/kit.png" alt="">
+                        <h6 class="text-uppercase">Kit banho</h6>
+                        <h5 class="text-orange mb-0">R$89,90</h5>
+                        <div class="btn-action d-flex justify-content-center">
+                            <a class="btn btn-orange py-2 px-3 add-to-cart" data-product="Kit banho" data-price="89.90"
+                                href="#"><i class="bi bi-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pb-5">
+                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                        <img class="img-fluid mb-4" src="../assets/img/dogtoy.png" alt="">
+                        <h6 class="text-uppercase">Brinquedo para gatos</h6>
+                        <h5 class="text-orange mb-0">R$19,99</h5>
+                        <div class="btn-action d-flex justify-content-center">
+                            <a class="btn btn-orange py-2 px-3 add-to-cart" data-product="Brinquedo para gatos" data-price="19.99" href="#"><i class="bi bi-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pb-5">
+                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                        <img class="img-fluid mb-4" src="../assets/img/dogtoy.png" alt="">
+                        <h6 class="text-uppercase">Ração para peixes</h6>
+                        <h5 class="text-orange mb-0">R$15,50</h5>
+                        <div class="btn-action d-flex justify-content-center">
+                            <a class="btn btn-orange py-2 px-3 add-to-cart" data-product="Ração para peixes" data-price="15.50" href="#"><i class="bi bi-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pb-5">
+                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                        <img class="img-fluid mb-4" src="../assets/img/dogtoy.png" alt="">
+                        <h6 class="text-uppercase">Cama para cães</h6>
+                        <h5 class="text-orange mb-0">R$79,90</h5>
+                        <div class="btn-action d-flex justify-content-center">
+                            <a class="btn btn-orange py-2 px-3 add-to-cart" data-product="Cama para cães" data-price="79.90" href="#"><i class="bi bi-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pb-5">
+                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                        <img class="img-fluid mb-4" src="../assets/img/dogtoy.png" alt="">
+                        <h6 class="text-uppercase">Coleira para cães</h6>
+                        <h5 class="text-orange mb-0">R$29,99</h5>
+                        <div class="btn-action d-flex justify-content-center">
+                            <a class="btn btn-orange py-2 px-3 add-to-cart" data-product="Coleira para cães" data-price="29.99" href="#"><i class="bi bi-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pb-5">
+                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                        <img class="img-fluid mb-4" src="../assets/img/dogtoy.png" alt="">
+                        <h6 class="text-uppercase">Comedouro para gatos</h6>
+                        <h5 class="text-orange mb-0">R$24,90</h5>
+                        <div class="btn-action d-flex justify-content-center">
+                            <a class="btn btn-orange py-2 px-3 add-to-cart" data-product="Comedouro para gatos" data-price="24.90" href="#"><i class="bi bi-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pb-5">
+                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                        <img class="img-fluid mb-4" src="../assets/img/dogtoy.png" alt="">
+                        <h6 class="text-uppercase">Brinquedo para cachorros</h6>
+                        <h5 class="text-orange mb-0">R$9,99</h5>
+                        <div class="btn-action d-flex justify-content-center">
+                            <a class="btn btn-orange py-2 px-3 add-to-cart" data-product="Brinquedo para cachorros" data-price="9.99" href="#"><i class="bi bi-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pb-5">
+                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                        <img class="img-fluid mb-4" src="../assets/img/bed.png" alt="">
+                        <h6 class="text-uppercase">Cama ortopédica para cães</h6>
+                        <h5 class="text-orange mb-0">R$169,90</h5>
+                        <div class="btn-action d-flex justify-content-center">
+                            <a class="btn btn-orange py-2 px-3 add-to-cart" data-product="Cama ortopédica para cães" data-price="169.90" href="#"><i class="bi bi-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pb-5">
+                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                        <img class="img-fluid mb-4" src="../assets/img/catfood.png" alt="">
+                        <h6 class="text-uppercase">Ração Premium para gatos</h6>
+                        <h5 class="text-orange mb-0">R$39,90</h5>
+                        <div class="btn-action d-flex justify-content-center">
+                            <a class="btn btn-orange py-2 px-3 add-to-cart" data-product="Ração Premium para gatos" data-price="39.90" href="#"><i class="bi bi-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pb-5">
+                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                        <img class="img-fluid mb-4" src="../assets/img/chewtoy.png" alt="">
+                        <h6 class="text-uppercase">Brinquedo de borracha para cães</h6>
+                        <h5 class="text-orange mb-0">R$25,00</h5>
+                        <div class="btn-action d-flex justify-content-center">
+                            <a class="btn btn-orange py-2 px-3 add-to-cart" data-product="Brinquedo de borracha para cães" data-price="25.00" href="#"><i class="bi bi-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pb-5">
+                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                        <img class="img-fluid mb-4" src="../assets/img/doghouse.png" alt="">
+                        <h6 class="text-uppercase">Casinha para cães</h6>
+                        <h5 class="text-orange mb-0">R$249,90</h5>
+                        <div class="btn-action d-flex justify-content-center">
+                            <a class="btn btn-orange py-2 px-3 add-to-cart" data-product="Casinha para cães" data-price="249.90" href="#"><i class="bi bi-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pb-5">
+                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                        <img class="img-fluid mb-4" src="../assets/img/cattoy.png" alt="">
+                        <h6 class="text-uppercase">Brinquedo interativo para gatos</h6>
+                        <h5 class="text-orange mb-0">R$19,99</h5>
+                        <div class="btn-action d-flex justify-content-center">
+                            <a class="btn btn-orange py-2 px-3 add-to-cart" data-product="Brinquedo interativo para gatos" data-price="19.99" href="#"><i class="bi bi-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pb-5">
+                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                        <img class="img-fluid mb-4" src="../assets/img/dogcollar.png" alt="">
+                        <h6 class="text-uppercase">Coleira com identificação para cães</h6>
+                        <h5 class="text-orange mb-0">R$45,00</h5>
+                        <div class="btn-action d-flex justify-content-center">
+                            <a class="btn btn-orange py-2 px-3 add-to-cart" data-product="Coleira com identificação para cães" data-price="45.00" href="#"><i class="bi bi-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pb-5">
+                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                        <img class="img-fluid mb-4" src="../assets/img/petbed.png" alt="">
+                        <h6 class="text-uppercase">Cama de pet de luxo</h6>
+                        <h5 class="text-orange mb-0">R$179,90</h5>
+                        <div class="btn-action d-flex justify-content-center">
+                            <a class="btn btn-orange py-2 px-3 add-to-cart" data-product="Cama de pet de luxo" data-price="179.90" href="#"><i class="bi bi-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="mb-4">Gostou de algum dos nossos produtos? <strong>Adicione ao carrinho e compre agora!</strong></p>
+                <a href="cart.html" class="btn btn-orange mt-2">Ir para o carrinho</a>
+            </div>
+        </div>
+    </div>
+    <!-- Products End -->
+
+    <!-- Oferta Especial PetConnect -->
+    <div class="container-fluid bg-offer my-5 py-5">
+        <div class="container py-5">
+            <div class="row gx-5 justify-content-start">
+                <div class="col-lg-7">
+                    <div class="border-start border-5 border-dark ps-5 mb-5">
+                        <h6 class="text-dark text-uppercase">Oferta especial</h6>
+                        <h1 class="display-5 text-uppercase text-white mb-0">Ganhe 50% de desconto na sua primeira
+                            consulta</h1>
+                    </div>
+                    <p class="text-white mb-4">
+                        Cadastre-se agora no PetConnect e aproveite 50% de desconto na sua primeira consulta
+                        veterinária. Cuide do seu pet com praticidade e segurança, agendando atendimentos diretamente
+                        pelo nosso aplicativo.
+                    </p>
+                    <a href="" class="btn btn-light py-md-3 px-md-5 me-3">Aproveitar oferta</a>
+                    <a href="" class="btn btn-outline-light py-md-3 px-md-5">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Oferta Especial PetConnect End -->
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-light mt-5 py-5">
+        <div class="container pt-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-orange ps-3 mb-4">Entre em contato</h5>
+                    <p class="mb-4">Tem alguma dúvida, sugestão ou precisa de ajuda? Nossa equipe do PetConnect está
+                        pronta para te atender. Entre em contato conosco pelos canais abaixo — será um prazer falar com
+                        você!</p>
+                    <p class="mb-2"><i class="bi bi-geo-alt text-orange me-2"></i>Univesidade Católica de Brasília</p>
+                    <p class="mb-2"><i class="bi bi-envelope-open text-orange me-2"></i>PetConnect@gmail.com</p>
+                    <p class="mb-0"><i class="bi bi-telephone text-orange me-2"></i>+55 (61)91122-3344</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-orange ps-3 mb-4">Links rápidos</h5>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-orange me-2"></i>Início</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-orange me-2"></i>Sobre
+                            nós</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-orange me-2"></i>Nossos
+                            serviços</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-orange me-2"></i>Conheça a
+                            equipe</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-orange me-2"></i>Blog mais
+                            recente</a>
+                        <a class="text-body" href="#"><i class="bi bi-arrow-right text-orange me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-orange ps-3 mb-4">Links populares</h5>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-orange me-2"></i>Início</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-orange me-2"></i>Sobre
+                            nós</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-orange me-2"></i>Nossos
+                            serviços</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-orange me-2"></i>Conheça a
+                            equipe</a>
+                        <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-orange me-2"></i>Blog mais
+                            recente</a>
+                        <a class="text-body" href="#"><i class="bi bi-arrow-right text-orange me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-orange ps-3 mb-4">Boletim informativo</h5>
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control p-3" placeholder="Seu Email">
+                            <button class="btn btn-orange">Inscrever-se</button>
+                        </div>
+                    </form>
+                    <h6 class="text-uppercase mt-4 mb-3">Siga nós</h6>
+                    <div class="d-flex">
+                        <a class="btn btn-outline-orange btn-square me-2" href="#"><i class="bi bi-twitter"></i></a>
+                        <a class="btn btn-outline-orange btn-square me-2" href="#"><i class="bi bi-facebook"></i></a>
+                        <a class="btn btn-outline-orange btn-square me-2" href="#"><i class="bi bi-linkedin"></i></a>
+                        <a class="btn btn-outline-orange btn-square" href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-12 text-center text-body">
+                    <a class="text-body" href="">Termos e Condições</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">política de Privacidade</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">Suporte ao Cliente</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">Pagamentos</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">Ajuda</a>
+                    <span class="mx-1">|</span>
+                    <a class="text-body" href="">Perguntas frequentes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white-50 py-4">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-md-0">&copy; <a class="text-white" href="#">Pet Connect</a>.Todos os direitos
+                        reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Projetado por <a class="text-white" href="">alunos da Univesidade Católica de
+                            Brasília </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top start -->
+    <a href="#" class="btn btn-orange py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- Back to Top  end -->
+
+
+    <script>
+    // Função para adicionar item ao carrinho
+    const cartButtons = document.querySelectorAll('.add-to-cart');
+    const cartMessage = document.getElementById('cart-message');
+
+    cartButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            const productName = button.getAttribute('data-product');
+            const productPrice = parseFloat(button.getAttribute('data-price'));
+
+            // Exibe a mensagem de confirmação
+            cartMessage.style.display = 'block';
+            setTimeout(() => {
+                cartMessage.style.display = 'none';
+            }, 3000);
+
+            // Armazena o item no localStorage
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // (opcional) Atualiza contador de carrinho visível
+            updateCartCount();
+            updateCartTotal();
+        });
+    });
+
+    // Atualiza contador de carrinho no ícone
+    function updateCartCount() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        document.getElementById('cart-count').textContent = cart.length;
+    }
+
+    // Calcula o valor total do carrinho
+    function updateCartTotal() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const total = cart.reduce((sum, item) => sum + item.price, 0);
+        document.getElementById('cart-total').textContent = `R$${total.toFixed(2)}`;
+    }
+
+    // Chamar ao carregar a página
+    updateCartCount();
+    updateCartTotal();
+</script>
+w
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/easing/easing.min.js"></script>
+    <script src="../assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="../assets/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

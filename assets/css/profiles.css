@@ -1,0 +1,135 @@
+/* profiles.css: consolidated profile & pet pages styling */
+
+/* Scope to profile pages */
+body.profile-page {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ff5e3a; /* mesmo laranja de fundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    min-height: 100vh;
+}
+
+.pet-profile-wrapper {
+    max-width: 450px;
+    width: 100%;
+}
+
+.pet-profile-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.pet-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.btn-upload-photo,
+.btn-upload {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.profile-header h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    margin-bottom: 20px;
+}
+
+.profile-info p,
+.profile-info ul li {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.profile-info h4 {
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.calendar-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.calendar {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar th,
+.calendar td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    width: 14%;
+    position: relative;
+}
+
+.event {
+    background-color: #ff5e3a;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* tooltip styling */
+.event:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.profile-pic-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.hidden {
+    display: none;
+}
