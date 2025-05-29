@@ -1,91 +1,111 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Arial', sans-serif;
+/* Reset e fonte */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  background-color: #f75e2f;
 }
 
+/* Container principal: imagem de fundo e formulário centralizado */
 .container-login100 {
-    display: flex;
-    height: 100vh;
-    width: 100%;
-    background-image: url('/assets/img/capa2.jpg'); /* caminho corrigido */
-    background-color: #f75e2f;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right center;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url('/assets/img/capa2.jpg'); /* imagem do cachorro */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;     /* centraliza verticalmente */
 }
 
-
+/* Caixa do formulário */
 .wrap-login100 {
-    background: white;
-    border-radius: 15px;
-    padding: 40px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    width: 100%;
-    max-width: 400px;
-    z-index: 10;
-}
-
-.container-login100::after {
-    content: "";
-    background-image: url('images/dog-headphones.png'); /* coloque aqui a imagem do cachorro */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right center;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 50%;
-    z-index: 5;
-}
-
-.logo-container {
-    display: none; /* remove a logo flutuante nesse layout */
+  background: rgba(255, 255, 255, 0.95); /* fundo branco com leve transparência */
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  z-index: 10;
+  overflow-y: auto;
 }
 
 /* Botões */
 .login100-form-btn {
-    background-color: #f75e2f;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s;
+  background-color: #f75e2f;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
 }
 
 .login100-form-btn:hover {
-    background-color: #e04f21;
+  background-color: #e04f21;
 }
 
 /* Inputs */
 .input100 {
-    width: 100%;
-    padding: 10px 12px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Labels dos inputs */
+.label-input100 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
 }
 
 /* Redes sociais */
 .login100-social-item {
-    width: 40px;
-    height: 40px;
-    margin: 0 5px;
-    border-radius: 50%;
-    color: white;
-    text-align: center;
-    line-height: 40px;
-    font-size: 20px;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  display: inline-block;
+  cursor: pointer;
 }
 
-.bg1 { background-color: #3b5998; }
-.bg2 { background-color: #1da1f2; }
-.bg3 { background-color: #db4437; }
+.bg1 {
+  background-color: #3b5998;
+}
+
+.bg2 {
+  background-color: #1da1f2;
+}
+
+.bg3 {
+  background-color: #db4437;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container-login100 {
+    background-position: center top;
+    padding: 20px 0;
+  }
+
+  .wrap-login100 {
+    border-radius: 15px;
+    max-width: 100%;
+    margin: 0 15px;
+  }
+}
