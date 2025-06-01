@@ -18,19 +18,23 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+        <h1 class="titulo-principal">Bem-Vindo ao PetConnect!</h1>
+
+
+
 <div id="mensagemAlerta" class="alert d-none position-fixed top-0 start-50 translate-middle-x mt-3 w-50 text-center" role="alert"></div>
   <!-- Background -->
   <div class="background-container">
     <div class="bg-left"></div>
     <div class="bg-right"></div>
   </div>
-
   <!-- Modal Login Tutor -->
   <div id="loginModalTutor" class="login-modal">
     <div class="flip-container" id="flipTutor">
       <div class="flipper">
         <!-- Login -->
         <!-- Login -->
+         
 <div class="modal-content tutor front">
   <span class="close-modal" onclick="closeModal('loginModalTutor')">&times;</span>
   <h2>Login do Tutor</h2>
@@ -189,13 +193,15 @@
         </div>
       </div>
     </div>
+    
   </div>
 
   <!-- Card principal -->
   <div class="content-card card shadow-lg text-center animate-card">
+
     <div class="dog-icon"></div>
     <div class="card-body p-5">
-      <h1 class="card-title fs-2 mb-3">Bem-Vindo ao PetConnect!</h1>
+     
       <p class="card-text fs-5 mb-4">Escolha uma das opções para atendermos melhor o seu desejo.</p>
       <div class="button-wrapper">
         <a href="#" class="wrap-login100-form-btn btn-tutor" onclick="openModal('loginModalTutor')">
@@ -209,13 +215,14 @@
           <span class="login100-form-btn">CLÍNICA / PETSHOP</span>
         </a>
       </div>
-      <footer class="u-align-center u-footer u-grey-80 mt-4">
-        <div class="u-sheet">
-          <p class="u-small-text u-text">PetConnect © 2025 — Conectando você ao melhor cuidado para seu pet.</p>
-        </div>
-      </footer>
+
     </div>
   </div>
+      <footer class="rodape-fixo">
+  <div class="u-sheet">
+    <p class="u-small-text u-text">PetConnect © 2025 — Conectando você ao melhor cuidado para seu pet.</p>
+  </div>
+</footer>
 
   <!-- JS -->
   <script src="/assets/js/org/modal.js"></script>

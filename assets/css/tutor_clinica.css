@@ -141,7 +141,7 @@ body.modal-open {
   display: none;
   position: fixed;
   inset: 0;
-  z-index: 999;
+  z-index: 1001;
   background-color: rgba(0,0,0,0.5);
   backdrop-filter: blur(5px);
   overflow: hidden;
@@ -149,6 +149,7 @@ body.modal-open {
   justify-content: center;
   align-items: flex-start;
   padding-top: 40px;
+
 }
 
 .modal-content.clinic.back,
@@ -367,4 +368,46 @@ body.modal-open {
 .choices[data-type*=select-multiple] .choices__button {
   color: #fff;
   opacity: 0.8;
+}
+.titulo-principal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  background: rgba(255, 140, 0, 0.9); /* laranja suave com transparência */
+  color: #fff;
+  font-size: 2.2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: fadeInDown 1s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rodape-fixo {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #111;
+  color: #eee;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 12px 0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
 }
