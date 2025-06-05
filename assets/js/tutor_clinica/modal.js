@@ -34,3 +34,4 @@ window.onclick = function (event) {
     if (flipper) flipper.classList.remove('flipped');
   }
 };
+
