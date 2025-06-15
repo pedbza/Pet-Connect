@@ -1,0 +1,217 @@
+/*--------------------------------------------------------------
+1. Variáveis de tema
+--------------------------------------------------------------*/
+:root {
+  --primary:   #0066cc;
+  --secondary: #004a99;
+  --accent:    #0088ff;
+  --bg:        #f8f9fa;
+  --card-bg:   #ffffff;
+  --text:      #333333;
+  --text-light:#555555;
+  --border:    #e0e6ed;
+  --radius:    10px;
+  --transition: 0.3s ease;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/*--------------------------------------------------------------
+2. Reset & Body
+--------------------------------------------------------------*/
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*--------------------------------------------------------------
+3. Navbar
+--------------------------------------------------------------*/
+.navbar {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  padding: 0.75rem 1.5rem;
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0; z-index: 100;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  transition: color var(--transition);
+}
+
+.navbar .nav-link:hover {
+  color: var(--accent) !important;
+}
+
+/*--------------------------------------------------------------
+4. Container principal
+--------------------------------------------------------------*/
+.container {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  flex-grow: 1;
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+/*--------------------------------------------------------------
+5. Cards gerais
+--------------------------------------------------------------*/
+.card {
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.card-header {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: #fff;
+  padding: 1rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/*--------------------------------------------------------------
+6. Formulários
+--------------------------------------------------------------*/
+.form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: #fff;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0,136,255,0.2);
+}
+
+.form-check-label {
+  cursor: pointer;
+  user-select: none;
+  transition: color var(--transition);
+}
+
+.form-check-input:checked + .form-check-label {
+  color: var(--accent);
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+  transform: translateY(-2px);
+}
+
+/*--------------------------------------------------------------
+7. Upload de imagem
+--------------------------------------------------------------*/
+.upload-image-container {
+  position: relative;
+  border: 2px dashed var(--border);
+  background-color: #fafbfc;
+  padding: 2rem;
+  border-radius: var(--radius);
+  text-align: center;
+  transition: border-color var(--transition), background-color var(--transition);
+}
+
+.upload-image-container:hover {
+  border-color: var(--accent);
+  background-color: #f0f4f8;
+}
+
+.upload-image-container input[type="file"] {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.upload-image-container .form-label {
+  font-weight: 600;
+  color: var(--secondary);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.upload-image-container .upload-response {
+  margin-top: 0.75rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/*--------------------------------------------------------------
+8. Footer
+--------------------------------------------------------------*/
+.footer {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  color: #fff;
+  padding: 1.5rem 0;
+  text-align: center;
+  border-top: 2px solid var(--accent);
+  margin-top: auto;
+}
+
+.footer p {
+  font-size: 0.875rem;
+}
+
+/*--------------------------------------------------------------
+9. Responsividade
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+
+  .container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .card-header {
+    font-size: 1.1rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .upload-image-container {
+    padding: 1.5rem;
+  }
+}

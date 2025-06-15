@@ -15,9 +15,28 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
-// Rota para cadastrar nova clínica (sem upload de imagem)
+/**
+ * Rota para cadastrar nova clínica
+ */
 router.post('/', async (req, res) => {
+  console.log('–– Cadastrar clínica ––');
+  console.log('Headers:', req.headers);
+  console.log('Body:', req.body);
+  console.log('Valores para inserção:', [
+    req.body.nome_estabelecimento,
+    req.body.email,
+    req.body.telefone,
+    req.body.endereco,
+    req.body.cep,
+    req.body.cnpj,
+    req.body.servicos,
+    req.body.tipo,
+    req.body.infraestrutura,
+    req.body.senha
+  ]);
   try {
+    // … sua INSERT aqui
+
     const {
       nome_estabelecimento, email, telefone, endereco, cep,
       cnpj, servicos, tipo, infraestrutura, senha
@@ -39,12 +58,20 @@ router.post('/', async (req, res) => {
 
     res.status(201).json({ message: 'Clínica cadastrada com sucesso.' });
   } catch (err) {
-    console.error('Erro ao cadastrar clínica:', err);
-    res.status(500).json({ message: 'Erro no servidor.' });
-  }
+  console.error('Erro ao cadastrar clínica:', err);
+  return res
+    .status(500)
+    .json({ 
+      error: err.message,
+      stack: err.stack.split('\n').slice(0,5)  // só as 5 primeiras linhas
+    });
+}
+
 });
 
-// Rota para login da clínica
+/**
+ * Rota de login da clínica
+ */
 router.post('/login', async (req, res) => {
   const { email, senha } = req.body;
 
@@ -65,15 +92,38 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ message: 'Senha inválida.' });
     }
 
-    return res.status(200).json({ message: 'Login realizado com sucesso', nome: clinica.nome_estabelecimento });
+    return res.status(200).json({
+      message: 'Login realizado com sucesso',
+      id: clinica.id,
+      nome: clinica.nome_estabelecimento
+    });
   } catch (err) {
     console.error('Erro no login da clínica:', err);
     res.status(500).json({ message: 'Erro no servidor.' });
   }
 });
 
-// Rota para atualizar dados da clínica, incluindo upload de imagem
-router.post('/:id', upload.single('imagem'), async (req, res) => {
+/**
+ * Rota para buscar clínica pelo ID
+ */
+router.get('/:id', async (req, res) => {
+  const { id } = req.params;
+  try {
+    const result = await db.query('SELECT * FROM clinicas WHERE id = $1', [id]);
+    if (result.rows.length === 0) {
+      return res.status(404).json({ message: 'Clínica não encontrada' });
+    }
+    res.json(result.rows[0]);
+  } catch (err) {
+    console.error('Erro ao buscar clínica:', err);
+    res.status(500).json({ message: 'Erro no servidor.' });
+  }
+});
+
+/**
+ * Rota para atualizar dados da clínica
+ */
+router.put('/:id', upload.single('imagem'), async (req, res) => {
   const { id } = req.params;
   const {
     nome_estabelecimento, email, telefone, endereco, cep,
@@ -82,7 +132,6 @@ router.post('/:id', upload.single('imagem'), async (req, res) => {
   const imagem = req.file ? req.file.filename : null;
 
   try {
-    // Montar query dinâmica para incluir ou não o campo imagem
     let query = `
       UPDATE clinicas SET 
         nome_estabelecimento = $1,
@@ -114,17 +163,21 @@ router.post('/:id', upload.single('imagem'), async (req, res) => {
   }
 });
 
-// Rota para buscar dados da clínica pelo id
-router.get('/:id', async (req, res) => {
+/**
+ * Rota para deletar uma clínica
+ */
+router.delete('/:id', async (req, res) => {
   const { id } = req.params;
   try {
-    const result = await db.query('SELECT * FROM clinicas WHERE id = $1', [id]);
-    if (result.rows.length === 0) {
+    const result = await db.query('DELETE FROM clinicas WHERE id = $1 RETURNING *', [id]);
+
+    if (result.rowCount === 0) {
       return res.status(404).json({ message: 'Clínica não encontrada' });
     }
-    res.json(result.rows[0]);
+
+    res.json({ message: 'Clínica excluída com sucesso.' });
   } catch (err) {
-    console.error('Erro ao buscar clínica:', err);
+    console.error('Erro ao deletar clínica:', err);
     res.status(500).json({ message: 'Erro no servidor.' });
   }
 });

@@ -32,6 +32,8 @@ document.querySelector('#loginModalClinic .back form').addEventListener('submit'
       body: JSON.stringify(data)
     });
     const result = await response.json();
+    console.log("DADOS DO LOGIN:", result);
+
     if (response.ok) {
       Swal.fire({ icon: 'success', title: 'Sucesso!', text: 'Cadastro da clínica realizado com sucesso!' });
       closeModal('loginModalClinic');
@@ -60,15 +62,18 @@ document.querySelector('#formLoginClinica').addEventListener('submit', async fun
     const result = await response.json();
 
     if (response.ok) {
-      Swal.fire({
-        icon: 'success',
-        title: 'Login efetuado com sucesso!',
-        showConfirmButton: false,
-        timer: 2000
-      }).then(() => {
-        window.location.href = '/painel-clinica.html';
-      });
-    } else {
+  // Armazena o ID da clínica no localStorage
+  localStorage.setItem('clinicaId', result.id); // ou result.clinica.id se a resposta vier aninhada
+  Swal.fire({
+    icon: 'success',
+    title: 'Login efetuado com sucesso!',
+    showConfirmButton: false,
+    timer: 2000
+  }).then(() => {
+    window.location.href = '/assets/html/homeClinica.html';
+  });
+}
+ else {
       Swal.fire({
         icon: 'error',
         title: 'Erro no login',

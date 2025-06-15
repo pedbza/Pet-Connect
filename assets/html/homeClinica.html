@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinica</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/homeClinica.css">
+  <link rel="icon" type="image/png" href="/assets/img/pata.ico" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de navegação usando o Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+            <img src="/assets/img/Untitled-2.png" alt="Logo do Pet Shop" class="logo">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/assets/html/configurações.html"><i class="fas fa-cogs"></i> Configurações</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal para Exibir e Editar Médicos -->
+    <div class="modal fade" id="medicosModal" tabindex="-1" aria-labelledby="medicosModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="medicosModalLabel">Médicos da Clínica</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group" id="medicosLista">
+                        <!-- Médicos serão preenchidos aqui dinamicamente -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção para Foto da Clínica e Informações -->
+    <div class="container mt-4">
+        <div class="row">
+ <img id="imagemClinica"
+       src=""
+       class="img-fluid mb-3"
+       alt="Foto da Clínica"
+       style="display:none"><h2>INFORMAÇÕES DA CLÍNICA</h2>
+<div id="clinicaInfo">
+  <p><strong>Nome da Clínica:</strong> <span id="nomeClinica">Carregando...</span></p>
+  <p><strong>Telefone:</strong> <span id="telefoneClinica">Carregando...</span></p>
+  <p><strong>Endereço:</strong> <span id="enderecoClinica">Carregando...</span></p>  <p><strong>CNPJ:</strong> <span id="cnpjClinica">Carregando...</span></p>
+  <p><strong>E-mail:</strong> <span id="emailClinica">Carregando...</span></p>
+</div>
+
+        </div>
+    </div>
+
+<section class="servicos mt-4">
+  <div class="container">
+    <h2>Serviços Oferecidos</h2>
+    <ul class="list-group" id="servicosClinica">
+      <!-- Serviços serão preenchidos aqui dinamicamente -->
+    </ul>
+  </div>
+</section>
+
+<!-- NOVA SEÇÃO: Infraestrutura -->
+<section class="infraestrutura mt-4">
+  <div class="container">
+    <h2>Infraestrutura</h2>
+    <div class="card p-3" id="infraestruturaClinica">
+      <!-- Infraestrutura será preenchida aqui dinamicamente -->
+    </div>
+  </div>
+</section>
+
+
+    <!-- Seção de Avaliações de Tutores -->
+    <section class="avaliacoes mt-4">
+        <div class="container">
+            <h2>Avaliações de Tutores</h2>
+            <div class="avaliacao mb-3">
+                <p><strong>Ana Beatriz</strong> 15 Mar 2025</p>
+                <p>Ah, eu adorei o estabelecimento! Muito limpo, organizado e com ótimo atendimento. Me senti muito acolhida com meu gato Tobias!</p>
+            </div>
+            <div class="avaliacao mb-3">
+                <p><strong>Carlos Henrique</strong> 03 Abr 2025</p>
+                <p>Profissionais especializados e muito atenciosos, principalmente o Dr. Lucas Ackerman, que cuidou muito bem do meu cachorro após uma cirurgia.</p>
+            </div>
+            <div class="avaliacao mb-3">
+                <p><strong>Juliana Mendes</strong> 28 Mar 2025</p>
+                <p>Levei minha calopsita para um check-up e fiquei impressionada com o cuidado da equipe! A estrutura é excelente, e os atendentes são super pacientes.</p>
+            </div>
+            <div class="avaliacao mb-3">
+                <p><strong>Rodrigo Lima</strong> 01 Abr 2025</p>
+                <p>Gostei muito da loja interna, achei tudo que precisava em um só lugar. Além disso, o serviço de adestramento foi super útil pro meu filhote!</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white text-center py-3">
+        <p>&copy; 2025 Pet Connect | Todos os direitos reservados</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/clinica/clinica.js"></script>
+</body>
+</html>

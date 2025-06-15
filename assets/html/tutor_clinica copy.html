@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PetConnect - Bem-vindo</title>
+
+  <!-- Estilos e Fontes -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.bootstrap5.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
+  <link rel="icon" type="image/png" href="/assets/img/pata.ico" />
+ <link rel="stylesheet" href="/assets/css/tutor_clinica copy.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+<div id="mensagemAlerta" class="alert d-none position-fixed top-0 start-50 translate-middle-x mt-3 w-50 text-center" role="alert"></div>
+  <!-- Background -->
+  <div class="background-container">
+    <div class="bg-left"></div>
+    <div class="bg-right"></div>
+  </div>
+  <!-- Modal Login Tutor -->
+  <div id="loginModalTutor" class="login-modal">
+    <div class="flip-container" id="flipTutor">
+      <div class="flipper">
+        <!-- Login -->
+        <!-- Login -->
+         
+<div class="modal-content tutor front">
+  <span class="close-modal" onclick="closeModal('loginModalTutor')">&times;</span>
+  <h2>Login do Tutor</h2>
+  <form id="formLoginTutor"> <!-- ← ID ADICIONADO AQUI -->
+    <div class="input-group">
+      <label>Email</label>
+      <input type="email" id="tutorLoginEmail" placeholder="Digite seu Email" required />
+    </div>
+    <div class="input-group">
+      <label>Senha</label>
+      <input type="password" id="tutorLoginSenha" placeholder="Digite sua senha" required />
+    </div>
+    <button type="submit" class="btn-login">ENTRAR COMO TUTOR</button>
+    <p class="register-link">Ou inscreva-se</p>
+    <button type="button" class="btn-register" onclick="flipCard('flipTutor')">CADASTRE-SE COMO TUTOR</button>
+  </form>
+</div>
+
+
+        <!-- Cadastro -->
+        <div class="modal-content tutor back">
+          <span class="close-modal" onclick="closeModal('loginModalTutor')">&times;</span>
+          <h2>Cadastro de Tutor</h2>
+          <form>
+            <div class="input-group">
+              <label>Nome</label>
+              <input type="text" id="tutorNome" placeholder="Digite seu nome" required />
+            </div>
+            <div class="input-group">
+              <label>Email</label>
+              <input type="email" id="tutorEmail" placeholder="Digite seu Email" required />
+            </div>
+            <div class="input-group">
+              <label>Telefone</label>
+              <input type="tel" id="tutorTelefone" placeholder="Digite seu telefone" required />
+            </div>
+            <div class="input-group">
+              <label>Gênero</label>
+              <select id="tutorGenero" required>
+                <option value="" disabled selected>Escolha seu gênero</option>
+                <option value="feminino">Feminino</option>
+                <option value="masculino">Masculino</option>
+                <option value="outro">Outro</option>
+                <option value="nao_dizer">Prefiro não dizer</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label>Senha</label>
+              <input type="password" id="tutorSenha" placeholder="Digite sua senha" required />
+            </div>
+            <div class="input-group">
+              <label>Confirmar Senha</label>
+              <input type="password" id="tutorConfirmarSenha" placeholder="Confirme sua senha" required />
+            </div>
+            <button type="submit" class="btn-login">CADASTRAR</button>
+            <p class="register-link">Já tem uma conta?</p>
+            <button type="button" class="btn-register" onclick="flipCard('flipTutor', true)">VOLTAR AO LOGIN</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<section class="hero">
+  <!-- Conteúdo centralizado -->
+  <div class="hero-content">
+    <small><h4>As melhores formas de cuidar do seus pets em um só Lugar</h4></small>
+    <small>Bem-Vindo ao PetConnect! <p>Escolha a opção que melhor te atende</p></small>
+    <div class="button-wrapper">
+      <a href="#" class="wrap-login100-form-btn btn-tutor" onclick="openModal('loginModalTutor')">
+        <div class="login100-form-bgbtn"></div>
+        <i class="fa-solid fa-dog icon icon-tutor"></i>
+        <span class="login100-form-btn">TUTOR</span>
+      </a>
+      <a href="#" class="wrap-login100-form-btn btn-clinic" onclick="openModal('loginModalClinic')">
+        <div class="login100-form-bgbtn"></div>
+        <i class="fa-solid fa-user-doctor icon icon-clinic"></i>
+        <span class="login100-form-btn">CLÍNICA / PETSHOP</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Camada de mídia: vídeo + imagens, posicionadas absolutamente -->
+  <div class="hero-media">
+    <div class="phone-mockup">
+      <video
+        src="/assets/img/phone-vide.mp4"
+        autoplay
+        loop
+        muted
+        playsinline
+      ></video>
+    </div>
+    <img
+      src="/assets/img/kommo-crm-messaging-character.png"
+      alt="Balão"
+      class="anim-bubble"
+    >
+    <img
+      src="/assets/img/kommo-crm-emailing-character.png"
+      alt="Carta"
+      class="anim-envelope"
+    >
+  </div>
+</section>
+
+  <!-- Modal Login Clínica -->
+  <div id="loginModalClinic" class="login-modal">
+    <div class="flip-container" id="flipClinic">
+      <div class="flipper">
+        <!-- Login -->
+        <!-- Login -->
+<div class="modal-content clinic front">
+  <span class="close-modal" onclick="closeModal('loginModalClinic')">&times;</span>
+  <h2>Login da Clínica</h2>
+  <form id="formLoginClinica"> <!-- ← ID ADICIONADO AQUI -->
+    <div class="input-group">
+      <label>Email</label>
+      <input type="email" id="clinicaLoginEmail" placeholder="Digite seu Email" required />
+    </div>
+    <div class="input-group">
+      <label>Senha</label>
+      <input type="password" id="clinicaLoginSenha" placeholder="Digite sua senha" required />
+    </div>
+    <button type="submit" class="btn-login">ENTRAR COMO CLÍNICA</button>
+    <p class="register-link">Ou inscreva-se</p>
+    <button type="button" class="btn-register" onclick="openModal('loginModalClinic', true)">CADASTRE SUA CLÍNICA</button>
+  </form>
+</div>
+
+
+        <!-- Cadastro -->
+        <div class="modal-content clinic back">
+          <span class="close-modal" onclick="closeModal('loginModalClinic')">&times;</span>
+          <h2>Cadastro de Clínica</h2>
+          <form>
+            <div class="input-group">
+              <label>Nome do Estabelecimento</label>
+              <input type="text" id="clinicaNome" placeholder="Digite o nome" required />
+            </div>
+            <div class="input-group">
+              <label>Email</label>
+              <input type="email" id="clinicaEmail" placeholder="Digite o email" required />
+            </div>
+            <div class="input-group">
+              <label>Telefone</label>
+              <input type="text" id="clinicaTelefone" placeholder="(xx) xxxxx-xxxx" required />
+            </div>
+            <div class="input-group">
+              <label>Endereço</label>
+              <input type="text" id="clinicaEndereco" placeholder="Rua, número, bairro, cidade - UF" required />
+            </div>
+            <div class="input-group">
+              <label>CEP</label>
+              <input type="text" id="clinicaCep" placeholder="xxxxx-xxx" required />
+            </div>
+            <div class="input-group">
+              <label>CNPJ</label>
+              <input type="text" id="clinicaCnpj" placeholder="xx.xxx.xxx/0001-xx" required />
+            </div>
+            <div class="input-group">
+              <select id="servicos" name="servicos[]" multiple>
+                <option value="consulta">Consulta</option>
+                <option value="vacina">Vacina</option>
+                <option value="hotel">Hotel</option>
+                <option value="adestramento">Adestramento</option>
+                <option value="loja">Loja de artigos</option>
+                <option value="banho">Banho e Tosa</option>
+                <option value="emergencia">Atendimento emergencial</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label>Tipo de Estabelecimento</label>
+              <select id="clinicaTipo" required>
+                <option value="" disabled selected>Selecione o tipo</option>
+                <option value="clinica">Clínica</option>
+                <option value="loja">Loja de Artigos de PET</option>
+                <option value="petshop">Petshop</option>
+                <option value="farmacia">Farmácia PET</option>
+                <option value="multiplo">Múltiplos (Clínica + PetShop, etc)</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label>Infraestrutura</label>
+              <textarea id="clinicaInfraestrutura" placeholder="Descreva salas de cirurgia, consultórios, capacidade de internação, etc." rows="3"></textarea>
+            </div>
+            <div class="input-group">
+              <label>Senha</label>
+              <input type="password" id="clinicaSenha" placeholder="Digite a senha" required />
+            </div>
+            <div class="input-group">
+              <label>Confirmar Senha</label>
+              <input type="password" id="clinicaConfirmarSenha" placeholder="Confirme a senha" required />
+            </div>
+            <button type="submit" class="btn-login">REGISTRAR</button>
+            <p class="register-link">Já tem uma conta?</p>
+            <button type="button" class="btn-register" onclick="openModal('loginModalClinic')">VOLTAR AO LOGIN</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+    </div>
+
+      <footer class="rodape-fixo">
+  <div class="u-sheet">
+    <p class="u-small-text u-text">PetConnect © 2025 — Conectando você ao melhor cuidado para seu pet.</p>
+  </div>
+</footer>
+
+  <!-- JS -->
+   
+  <script src="/assets/js/tutor_clinica/modal.js"></script>
+<script src="/assets/js/tutor_clinica/masks.js"></script>
+<script src="/assets/js/tutor_clinica/validator.js"></script>
+<script src="/assets/js/tutor_clinica/formTutor.js"></script>
+<script src="/assets/js/tutor_clinica/formClinica.js"></script>
+<script src="/assets/js/tutor_clinica/main.js"></script>
+</body>
+</html>
