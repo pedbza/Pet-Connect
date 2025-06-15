@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* --------- VARIÁVEIS ----------- */
+:root {
+  --orange:       #ff5e3a;
+  --orange-dark:  #e04b2c;
+  --gray-light:   #f8f9fa;
+  --gray:         #666666;
+  --dark:         #333333;
+  --white:        #ffffff;
+  --border:       #e0e6ed;
+  --radius:       8px;
+  --transition:   0.3s cubic-bezier(.77,0,.18,1);
+  --shadow-sm:    0 2px 8px rgba(0,0,0,0.05);
+  --shadow-md:    0 4px 15px rgba(0,0,0,0.1);
+  font-family:    'Poppins', sans-serif;
+}
+
+/* --------- BODY/BACKGROUND ----------- */
+body {
+  background: var(--gray-light);
+  font-family: var(--font-family);
+  color: var(--dark);
+  min-height: 100vh;
+}
+
+/* --------- NAVBAR ----------- */
+.navbar {
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar .btn-link,
+.navbar .btn-link:focus {
+  color: var(--orange);
+  text-decoration: none;
+  outline: none;
+}
+
+.navbar .btn-link:hover {
+  color: var(--orange-dark);
+}
+
+/* --------- PROFILE CARD FLIP ----------- */
+.profile-card {
+  width: 100%;
+  max-width: 370px;
+  margin: 48px auto;
+  perspective: 1200px;
+  min-height: 480px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform var(--transition);
+  transform-style: preserve-3d;
+}
+
+.card-flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+  padding: 36px 24px 28px 24px;
+  position: absolute;
+  width: 100%;
+  min-height: 480px;
+  backface-visibility: hidden;
+  border: 1px solid var(--border);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+
+/* --------- FOTO E UPLOAD ----------- */
+.profile-pic-area {
+  text-align: center;
+  margin-top: 36px;
+  margin-bottom: 24px;
+}
+
+.profile-pic-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-pic {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--orange);
+  background: var(--gray-light);
+  box-shadow: 0 2px 10px #ff5e3a22;
+  display: block;
+  transition: box-shadow .2s;
+}
+.profile-pic:hover {
+  box-shadow: 0 4px 16px #ff5e3a44;
+}
+
+.upload-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: var(--orange);
+  color: #fff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px #ff5e3a55;
+  cursor: pointer;
+  font-size: 19px;
+  transition: background .2s;
+}
+.upload-btn:hover {
+  background: var(--orange-dark);
+  color: #fff;
+}
+
+.profile-pic-label {
+  font-size: 14px;
+  color: var(--gray);
+  margin-top: 6px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* --------- BOTÃO EDITAR PETS ----------- */
+.edit-pets-btn {
+  position: absolute;
+  top: -20px;
+  right: 24px;
+  background: var(--orange);
+  color: var(--white);
+  border-radius: 12px 12px 0 0;
+  padding: 6px 16px 6px 14px;
+  font-size: 15px;
+  border: none;
+  box-shadow: 0 2px 8px #ff5e3a22;
+  cursor: pointer;
+  transition: background .2s;
+  z-index: 2;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.edit-pets-btn:hover {
+  background: var(--orange-dark);
+}
+
+/* --------- FORM PROFILE ----------- */
+.profile-card .form-label {
+  font-weight: 500;
+  color: var(--dark);
+  margin-bottom: 4px;
+  font-size: 15px;
+}
+.profile-card .form-control,
+.profile-card .form-select {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--gray-light);
+  color: var(--dark);
+  box-shadow: none;
+  transition: border-color var(--transition);
+  font-size: 15px;
+}
+.profile-card .form-control:focus,
+.profile-card .form-select:focus {
+  border-color: var(--orange);
+  outline: none;
+  box-shadow: 0 0 0 2px #ff5e3a33;
+}
+
+/* --------- BOTÃO VOLTAR NA CARD-BACK ----------- */
+.back-to-profile {
+  background: none;
+  border: none;
+  color: var(--orange);
+  font-size: 17px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.back-to-profile:hover {
+  color: var(--orange-dark);
+  text-decoration: underline;
+}
+
+/* --------- PETS LIST ----------- */
+.card-back .list-group-item {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--gray-light);
+  color: var(--dark);
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.card-back .badge {
+  background: var(--orange);
+  color: var(--white);
+  font-weight: 400;
+  font-size: 13px;
+  margin-left: 8px;
+}
+
+.card-back .btn-outline-danger {
+  border-color: var(--orange);
+  color: var(--orange);
+  font-size: 14px;
+  padding: 2px 8px;
+  transition: all .2s;
+}
+.card-back .btn-outline-danger:hover {
+  background: var(--orange);
+  color: var(--white);
+  border-color: var(--orange);
+}
+
+/* --------- BOTÃO ADICIONAR PET ----------- */
+.card-back .btn-orange {
+  background: var(--orange);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 500;
+  font-size: 15px;
+  padding: 8px 0;
+  margin-top: 12px;
+  transition: background .2s;
+}
+.card-back .btn-orange:hover {
+  background: var(--orange-dark);
+}
+
+html, body {
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Footer fixo */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+}
+footer .container p {
+  margin-bottom: 4px; /* ou 0 se quiser colado */
+  font-size: 15px;
+}
+
+footer .btn {
+  padding: 4px 12px;
+  font-size: 17px;
+  border-radius: 6px;
+}

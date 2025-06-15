@@ -59,7 +59,7 @@ document.querySelector('#formLoginTutor').addEventListener('submit', async funct
         showConfirmButton: false,
         timer: 2000
       }).then(() => {
-        window.location.href = '/painel-tutor.html';
+        window.location.href = '/assets/html/homeTutor.html';
       });
     } else {
       Swal.fire({

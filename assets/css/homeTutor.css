@@ -1,0 +1,435 @@
+/*----------------------------------------
+1. Font & Variables
+----------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --orange:       #ff5e3a;
+  --orange-dark:  #e04b2c;
+  --gray-light:   #f8f9fa;
+  --gray:         #666666;
+  --dark:         #333333;
+  --white:        #ffffff;
+  --border:       #e0e6ed;
+  --radius:       8px;
+  --transition:   0.3s ease;
+  --shadow-sm:    0 2px 8px rgba(0,0,0,0.05);
+  --shadow-md:    0 4px 15px rgba(0,0,0,0.1);
+  font-family:    'Poppins', sans-serif;
+}
+
+/*----------------------------------------
+2. Reset & Base
+----------------------------------------*/
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+  background-color: var(--gray-light);
+  color: var(--dark);
+  font-family: var(--font-family);
+  line-height: 1.6;
+}
+a {
+  color: var(--orange-dark);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+a:hover {
+  color: var(--orange);
+}
+
+/*----------------------------------------
+3. Topbar
+----------------------------------------*/
+.container-fluid.border-bottom.position-relative {
+  background: var(--white);
+  border-bottom: 2px solid var(--orange);
+  padding: 0.5rem 0;
+}
+.container-fluid.border-bottom .bi {
+  color: var(--orange);
+  font-size: 1.2rem;
+}
+.container-fluid.border-bottom h6 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.container-fluid.border-bottom span {
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+.container-fluid.border-bottom a[title="Meu Perfil"] {
+  font-size: 1.6rem;
+  color: var(--orange);
+  transition: transform var(--transition);
+}
+.container-fluid.border-bottom a[title="Meu Perfil"]:hover {
+  transform: scale(1.1);
+}
+
+/*----------------------------------------
+4. Navbar
+----------------------------------------*/
+.navbar {
+  background: var(--white) !important;
+  box-shadow: var(--shadow-sm);
+  padding: 0.75rem 1rem;
+}
+.navbar .navbar-brand img {
+  height: 60px;
+  transition: transform var(--transition);
+}
+.navbar .navbar-brand img:hover {
+  transform: scale(1.05);
+}
+.navbar-nav .nav-link {
+  color: var(--dark) !important;
+  font-weight: 500;
+  margin: 0 0.5rem;
+  transition: color var(--transition);
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  color: var(--orange) !important;
+}
+.nav-contact {
+  background: var(--orange);
+  color: var(--white) !important;
+  padding: 0.5rem 1.5rem !important;
+  border-radius: var(--radius);
+  transition: background var(--transition);
+}
+.nav-contact:hover {
+  background: var(--orange-dark) !important;
+}
+
+/*----------------------------------------
+5. Hero Section
+----------------------------------------*/
+.hero-header {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+}
+.hero-header h1,
+.hero-header p {
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* 2) Botão “Leia mais” mais sutil */
+.hero-header .btn-outline-light {
+  border-color: rgba(255,255,255,0.8);
+  color: #fff;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.hero-header .btn-outline-light:hover {
+  background: #fff;
+  color: var(--orange); /* ou #ff7e5f */
+}
+
+/* 3) Botão de play circular com “triângulo” central */
+.btn-play {
+  position: relative;
+  width: 60px; height: 60px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+  flex-shrink: 0;
+}
+.btn-play span {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 0; height: 0;
+  border-left: 16px solid #fff;       /* largura do triângulo */
+  border-top: 10px solid transparent; /* altura */
+  border-bottom: 10px solid transparent;
+  transform: translate(-35%, -50%);    /* centraliza o triângulo */
+}
+.btn-play:hover {
+  background: rgba(255,255,255,0.4);
+  transform: scale(1.1);
+}
+
+/* 4) Texto “Reproduzir vídeo” alinhado com o botão */
+.hero-header span.d-none.d-sm-block {
+  color: rgba(255,255,255,0.85);
+  font-weight: 500;
+}
+
+/* 5) Responsividade – reduz um pouco no mobile */
+@media (max-width: 576px) {
+  .btn-play {
+    width: 50px; height: 50px;
+  }
+  .btn-play span {
+    border-left-width: 12px;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+    transform: translate(-35%, -50%);
+  }
+}
+/*----------------------------------------
+6. About Section
+----------------------------------------*/
+.border-start.border-5.border-orange {
+  border-color: var(--orange) !important;
+}
+.bg-light.ps-5 h6.text-orange {
+  color: var(--orange);
+}
+.tab-content p {
+  color: var(--gray);
+}
+
+/*----------------------------------------
+7. Services Section
+----------------------------------------*/
+/* === Seção de Serviços === */
+section.py-5.bg-light {
+  /* Espaçamento extra e fundo suave */
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+  background: var(--bg);
+}
+
+/* Header da seção */
+section.py-5.bg-light > .container > .border-start {
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+section.py-5.bg-light h6 {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+section.py-5.bg-light h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+
+/* Grid de cards de serviço */
+.service-item {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Hover: levanta o card */
+.service-item:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Ícone do serviço */
+.service-item i {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  transition: color var(--transition);
+}
+.service-item:hover i {
+  color: var(--primary);
+}
+
+/* Título e texto */
+.service-item h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--secondary);
+}
+.service-item p {
+  flex-grow: 1;
+  color: var(--text-light);
+  margin-bottom: 1.25rem;
+}
+
+/* Link “Saiba mais” */
+.service-item a {
+  font-weight: 500;
+  color: var(--primary);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: color var(--transition);
+}
+.service-item a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* Certifica-se de que todos os cards tenham mesma altura */
+.row.g-4 .col-md-6, 
+.row.g-4 .col-lg-4 {
+  display: flex;
+}
+.row.g-4 .col-md-6 .service-item,
+.row.g-4 .col-lg-4 .service-item {
+  flex: 1;
+}
+
+/* Responsividade fina */
+@media (max-width: 576px) {
+  section.py-5.bg-light h2 {
+    font-size: 1.75rem;
+  }
+  .service-item {
+    padding: 1.5rem;
+  }
+  .service-item i {
+    font-size: 2rem;
+  }
+}
+
+
+/*----------------------------------------
+8. Search & Map
+----------------------------------------*/
+#locationInput {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+#locationInput:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(255,94,58,0.2);
+  outline: none;
+}
+.btn-orange {
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.75rem;
+  transition: background var(--transition);
+}
+.btn-orange:hover {
+  background: var(--orange-dark);
+}
+#mapa-placeholder {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+#resultados .card {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+#resultados .card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+#resultados .card-title {
+  color: var(--orange);
+}
+
+/*--------------------------------------------------------------
+Products Carousel
+--------------------------------------------------------------*/
+.products-section {
+  padding: 4rem 0;
+  background: var(--light-bg);
+}
+.products-section .border-start {
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+.products-section h6 {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.products-section h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+.product-carousel .product-item {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.product-carousel .product-item:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+.product-carousel .product-item img {
+  max-height: 150px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+.product-carousel .product-item h6 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+  text-transform: uppercase;
+}
+.product-carousel .product-item h5 {
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+Special Offer
+--------------------------------------------------------------*/
+.offer-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, var(--accent), var(--primary));
+  color: #fff;
+}
+.offer-section .border-start {
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+.offer-section h6 {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #fff;
+}
+.offer-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+}
+.offer-section p {
+  font-size: 1rem;
+  max-width: 600px;
+}
+.offer-section .btn-light {
+  background: #fff;
+  color: var(--primary);
+  font-weight: 600;
+  margin-right: 1rem;
+}
+.offer-section .btn-light:hover {
+  background: #f0f0f0;
+}
+.offer-section .btn-outline-light {
+  border-color: #fff;
+  color: #fff;
+}
+.offer-section .btn-outline-light:hover {
+  background: rgba(255,255,255,0.2);
+}
+

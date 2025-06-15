@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Pet Connect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pet Connect - Seu pet, nosso cuidado.">
+  <meta name="keywords" content="Pet Connect, Pet Shop, Cuidados com Pets, Saúde Animal">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#ff5e3a">
+
+  <!-- Favicon -->
+  <link href="/assets/img/pata.ico" rel="icon">
+  <!-- Bootstrap CSS -->
+  <link href= "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-…" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link href="/assets/css/homeTutor.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    
+  <!-- HEADER / NAVBAR -->
+  <div id="page-wrapper" class="animate-in">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="/assets/img/Pet Shop (2) (1).png" alt="Pet Connect Logo" height="60">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                  aria-expanded="false" aria-label="Alternar menu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link" href="/assets/html/homeTutor.html">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-link" href="/assets/html/planos.html">Planos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-link" href="/assets/html/loja.html">Loja</a>
+              </li>
+              <li class="nav-item ms-lg-4">
+                <a class="btn btn-orange text-white" href="/assets/html/perfiltutor.html">
+                  Perfil <i class="bi bi-arrow-right"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+  <!-- HERO -->
+    <section class="hero-header bg-orange text-white text-center text-lg-start py-5 mb-5">
+        <div class="container py-5">
+      <div class="row justify-content-start">
+        <div class="col-lg-8">
+          <h1 class="display-1 text-uppercase mb-3">Pet Connect</h1>
+          <p class="fs-4 mb-4">
+            Conecte-se ao bem-estar do seu pet: mantenha-se informado sobre saúde, bem-estar e rotina com atualizações em tempo real.
+          </p>
+          <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-3">
+            <a href="#" class="btn btn-outline-light btn-lg">Leia mais</a>
+            <button type="button" class="btn-play" data-bs-toggle="modal" data-bs-target="#videoModal" aria-label="Reproduzir vídeo">
+              <span></span>
+            </button>
+            <span class="d-none d-sm-block ms-2">Reproduzir vídeo</span>
+          </div>
+        </div>
+      </div>
+        </div>
+    </section>
+
+  <!-- VIDEO MODAL -->
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content rounded-0">
+        <div class="modal-header">
+          <h5 class="modal-title" id="videoModalLabel">Apresentação Pet Connect</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe id="video" src="https://www.youtube.com/embed/yuOOO_l66r4?"
+                    title="Vídeo Pet Connect" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- SOBRE NÓS -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row gx-5 align-items-center">
+          <div class="col-lg-5 mb-4 mb-lg-0">
+            <div class="ratio ratio-4x3 rounded overflow-hidden shadow-sm">
+              <img src="/assets/img/about.jpg" alt="Sobre Pet Connect" class="img-fluid" style="object-fit:cover;">
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="border-start border-5 border-orange ps-4 mb-3">
+              <h6 class="text-uppercase text-orange mb-1">Sobre nós</h6>
+              <h2 class="display-5 text-uppercase mb-0">Conectamos tutores a cuidados de qualidade</h2>
+            </div>
+            <p class="lead mb-4">
+              O PetConnect nasceu da paixão por animais e da necessidade de facilitar a vida de tutores e profissionais.
+            </p>
+            <p>
+              Aqui você encontra profissionais, agendamentos, histórico de saúde e uma comunidade que zela pelo bem-estar do seu pet.
+            </p>
+            <div class="bg-light p-4 rounded mt-4">
+              <ul class="nav nav-pills justify-content-between mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item w-50" role="presentation">
+                  <button class="nav-link active text-uppercase" id="missao-tab" data-bs-toggle="pill"
+                          data-bs-target="#missao" type="button">Nossa Missão</button>
+                </li>
+                <li class="nav-item w-50" role="presentation">
+                  <button class="nav-link text-uppercase" id="visao-tab" data-bs-toggle="pill"
+                          data-bs-target="#visao" type="button">Nossa Visão</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="missao" role="tabpanel">
+                  Transformar a experiência de cuidar do seu pet
+                </div>
+                <div class="tab-pane fade" id="visao" role="tabpanel">
+                  Ser a principal plataforma pet do Brasil, unindo tecnologia e amor pelos animais.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="border-start border-5 border-orange ps-4 mb-4" style="max-width:600px;">
+          <h6 class="text-uppercase text-orange mb-1">Serviços</h6>
+          <h2 class="display-5 text-uppercase mb-0">Tudo o que seu pet precisa</h2>
+        </div>
+        <div class="row g-4">
+          <!-- repetir p/ cada serviço -->
+          <div class="col-md-6 col-lg-4">
+            <div class="service-item p-4 h-100">
+              <i class="flaticon-house display-4 text-orange mb-3"></i>
+              <h5 class="text-uppercase mb-2">Clínicas & Pet Shops</h5>
+              <p class="mb-3">Localize estabelecimentos para consultas, banho e tosa próximos a você.</p>
+            </div>
+          </div>
+          <!-- ... outros 5 serviços ... -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ENCONTRAR PRÓXIMOS -->
+    <section class="py-5">
+      <div class="container">
+        <div class="border-start border-5 border-orange ps-4 mb-4" style="max-width:600px;">
+          <h6 class="text-uppercase text-orange mb-1">Descubra serviços</h6>
+          <h2 class="display-5 text-uppercase mb-0">Perto de você</h2>
+        </div>
+        <div class="row g-4 mb-5">
+          <div class="col-lg-8">
+            <input type="text" id="locationInput" class="form-control form-control-lg"
+                   placeholder="Digite seu endereço ou permita GPS">
+          </div>
+          <div class="col-lg-4">
+            <button class="btn btn-orange btn-lg w-100" onclick="buscarEstabelecimentos()">Buscar agora</button>
+          </div>
+        </div>
+        <div id="mapa-placeholder" class="rounded shadow-sm overflow-hidden mb-5">
+          <img src="/assets/img/map-placeholder.PNG" alt="Mapa" class="img-fluid w-100">
+        </div>
+        <div id="resultados" class="row g-4"></div>
+      </div>
+    </section>
+  </main>
+
+<!-- Top Rated Establishments Start -->
+<section class="container-fluid py-5 top-rated-section">
+  <div class="container">
+    <div class="border-start border-5 border-orange ps-5 mb-5" style="max-width: 600px;">
+      <h6 class="text-orange text-uppercase">Estabelecimentos Bem Avaliados</h6>
+      <h1 class="display-5 text-uppercase mb-0">
+        Os melhores petshops e clínicas perto de você
+      </h1>
+    </div>
+    <!-- container vazio: será preenchido por JS -->
+    <div class="owl-carousel team-carousel position-relative" style="padding-right: 25px;">
+    </div>
+  </div>
+</section>
+<!-- Top Rated Establishments End -->
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white-50 py-5">
+    <div class="container text-center">
+      <p class="mb-2">&copy; 2025 Pet Connect. Todos os direitos reservados.</p>
+      <p>Desenvolvido por alunos da Universidade Católica de Brasília.</p>
+      <a href="#" class="btn btn-orange back-to-top" aria-label="Voltar ao topo">
+        <i class="bi bi-arrow-up"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS no fim para melhorar performance -->
+  <!-- jQuery (requerido pelo Owl) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<!-- Owl Carousel -->
+<script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
+  <!-- Seu script que popula o carrossel -->
+  <script src="/assets/js/tutor/home.js" defer></script>
+    <script src="/assets/js/tutor/transicao.js" defer></script>
+</body>
+</html>

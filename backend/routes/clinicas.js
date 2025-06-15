@@ -102,6 +102,25 @@ router.post('/login', async (req, res) => {
     res.status(500).json({ message: 'Erro no servidor.' });
   }
 });
+/**
+ * Rota para listar todas as clínicas
+ */
+router.get('/', async (req, res) => {
+  try {
+    // Seleciona apenas os campos que interessam ao cliente
+    const result = await db.query(`
+      SELECT id,
+             nome_estabelecimento,
+             imagem,
+             tipo
+      FROM clinicas
+    `);
+    res.json(result.rows);
+  } catch (err) {
+    console.error('Erro ao buscar clínicas:', err);
+    res.status(500).json({ message: 'Erro no servidor.' });
+  }
+});
 
 /**
  * Rota para buscar clínica pelo ID
