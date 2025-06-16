@@ -279,12 +279,12 @@ footer {
   z-index: 100;
 }
 footer .container p {
-  margin-bottom: 4px; /* ou 0 se quiser colado */
+  margin-bottom: 0px; /* ou 0 se quiser colado */
   font-size: 15px;
 }
 
 footer .btn {
   padding: 4px 12px;
-  font-size: 17px;
-  border-radius: 6px;
+  font-size: 1px;
+  border-radius: 1px;
 }

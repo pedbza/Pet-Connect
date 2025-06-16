@@ -60,3 +60,16 @@ async function carregarClinicas() {
     console.error('Erro ao carregar clínicas:', err);
   }
 }
+$(document).ready(function(){
+  $('.product-carousel').owlCarousel({
+    loop:true,
+    margin:24,
+    nav:true,
+    dots:true,
+    responsive:{
+      0:{ items:1 },
+      600:{ items:2 },
+      1000:{ items:4 }
+    }
+  });
+});
