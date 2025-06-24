@@ -4,21 +4,28 @@ const path = require('path');
 
 const app = express();
 
-// Middleware CORS deve vir antes das rotas
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-// Servir arquivos estáticos da pasta uploads para acesso das imagens
+// Servir arquivos estáticos
+app.use(express.static(path.join(__dirname, '../')));
+
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Rotas
 const tutoresRoutes = require('./routes/tutores');
-const clinicasRoutes = require('./routes/clinicas'); // <- Certifique que essa linha existe
+const clinicasRoutes = require('./routes/clinicas');
 
 app.use('/tutores', tutoresRoutes);
-app.use('/clinicas', clinicasRoutes); // <- E essa também
+app.use('/clinicas', clinicasRoutes);
 
-// Iniciar o servidor
-app.listen(3000, () => {
-  console.log('Servidor rodando em http://localhost:3000');
-});
+// Apenas inicie o servidor se este arquivo for executado diretamente
+if (require.main === module) {
+  app.listen(3000, () => {
+    console.log('Servidor rodando em http://localhost:3000');
+  });
+}
+
+// Exporte o app para que os testes possam usá-lo
+module.exports = app;

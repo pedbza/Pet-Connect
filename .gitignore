@@ -1,0 +1,36 @@
+# Oculta dependências e resultados temporários
+node_modules/
+results/
+
+# Resultados de testes e relatórios
+coverage/
+output.xml
+log.html
+report.html
+
+# Arquivos temporários e de sistema
+*.log
+*.tmp
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+
+# Configurações de IDE
+.vscode/
+.idea/
+*.iml
+*.code-workspace
+.history/
+
+# Build
+/dist/
+/build/
+
+# Banco de dados local
+*.sqlite3
+*.db
+*.sqlite
